@@ -57,7 +57,7 @@ public class Squad implements Iterable<Squad> {
         Set<Player> reservePlayersSet = new HashSet<>();
 
         for (int i = 0; i < vectorRepresentation.length; i++) {
-            if (vectorRepresentation[i] == 0) {
+            if (vectorRepresentation[i] == 2) {
                 reservePlayersSet.add(players.get(i));
             }
         }
@@ -146,7 +146,7 @@ public class Squad implements Iterable<Squad> {
 
         @Override
         public boolean hasNext() {
-            return visitedNumber != 15 && j < vectorRepresentation.length;
+            return visitedNumber != 15 || j < vectorRepresentation.length;
         }
 
         @Override
@@ -178,27 +178,31 @@ public class Squad implements Iterable<Squad> {
         }
     }
 
-    public static Squad generateRandomSquad(List<Player> players, Random random, int activePlayersCount, int reservePlayersCount) {
-        Squad squad = new Squad(activePlayersCount, reservePlayersCount, players);
+    public static Squad generateRandomValidSquad(List<Player> players, Random random, int activePlayersCount, int reservePlayersCount) {
 
-        var pickedPlayers = random.ints(0, players.size() - 1)
-                .distinct()
-                .limit((long) activePlayersCount + reservePlayersCount)
-                .mapToObj(players::get)
-                .toList();
+        Squad squad;
+        do {
+            squad = new Squad(activePlayersCount, reservePlayersCount, players);
 
-        var activePlayers = random.ints(0, pickedPlayers.size() - 1)
-                .distinct()
-                .limit(activePlayersCount)
-                .mapToObj(pickedPlayers::get)
-                .toList();
+            var pickedPlayers = random.ints(0, players.size() - 1)
+                    .distinct()
+                    .limit((long) activePlayersCount + reservePlayersCount)
+                    .mapToObj(players::get)
+                    .toList();
 
-        var reservePlayers = new ArrayList<>(pickedPlayers);
-        reservePlayers.removeAll(activePlayers);
+            var activePlayers = random.ints(0, pickedPlayers.size() - 1)
+                    .distinct()
+                    .limit(activePlayersCount)
+                    .mapToObj(pickedPlayers::get)
+                    .toList();
+
+            var reservePlayers = new ArrayList<>(pickedPlayers);
+            reservePlayers.removeAll(activePlayers);
 
 
-        activePlayers.forEach(squad::addActivePlayer);
-        reservePlayers.forEach(squad::addReservePlayer);
+            activePlayers.forEach(squad::addActivePlayer);
+            reservePlayers.forEach(squad::addReservePlayer);
+        } while (! squad.checkRule(SquadRules.allRules));
 
         return squad;
     }

@@ -6,6 +6,7 @@ import hr.fer.hmo.lab1.algorithm.ISearchAlgorithm;
 import hr.fer.hmo.lab1.player.Player;
 import hr.fer.hmo.lab1.player.PlayerPosition;
 import hr.fer.hmo.lab1.squad.Squad;
+import hr.fer.hmo.lab1.squad.SquadRules;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -32,7 +33,14 @@ public class Main {
         try {
             List<Player> players = loadPlayers(file);
 
-            Squad test = Squad.generateRandomSquad(players, new Random(), 11, 4);
+            Squad test = Squad.generateRandomValidSquad(players, new Random(), 11, 4);
+
+            for (var n : test) {
+                if (n.checkRule(SquadRules.allRules)) {
+                    System.out.println(n);
+                    System.out.println(n.getScore());
+                }
+            }
 
             Squad solution = algorithm.search(players, null);
 

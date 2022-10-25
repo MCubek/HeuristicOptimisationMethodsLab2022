@@ -88,7 +88,7 @@ public class SquadRules {
                 .orElse(false);
     };
 
-    private static final ISquadRule allRules = (activePlayers, reservePlayers) ->
+    public static final ISquadRule allRules = (activePlayers, reservePlayers) ->
             budgetRule.validate(activePlayers, reservePlayers) &&
             squadFormationRule.validate(activePlayers, reservePlayers) &&
             singleClubRule.validate(activePlayers, reservePlayers) &&
