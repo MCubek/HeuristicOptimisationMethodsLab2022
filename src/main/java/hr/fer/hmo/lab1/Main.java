@@ -13,6 +13,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Main {
 
@@ -30,6 +31,8 @@ public class Main {
 
         try {
             List<Player> players = loadPlayers(file);
+
+            Squad test = Squad.generateRandomSquad(players, new Random(), 11, 4);
 
             Squad solution = algorithm.search(players, null);
 
