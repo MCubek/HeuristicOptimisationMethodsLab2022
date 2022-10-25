@@ -4,27 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6884bc6e-f481-4646-b889-6ac6b1007b7f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/player/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/player/PlayerPosition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/ISquadRule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/Squad.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/SquadRules.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/2022_instance1.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/2022_instance2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/2022_instance3.csv" afterDir="false" />
+    <list default="true" id="6884bc6e-f481-4646-b889-6ac6b1007b7f" name="Changes" comment="init and starting">
+      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GraspSearchAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GreedyLocalSearchAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/ISearchAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,18 +46,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/matejc/Dev/IntelliJ/Heurističke metode optimizacije/Lab1_HMO/src/main/resources&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/matejc/Dev/IntelliJ/Heurističke metode optimizacije/Lab1_HMO/src/main/resources",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="hr.fer.hmo.lab1.player" />
@@ -81,11 +68,11 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Instance3">
-    <configuration name="Instance1" type="Application" factoryName="Application" temporary="true">
+  <component name="RunManager" selected="Application.Instance3 GRASP">
+    <configuration name="Instance1 GRASP" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.lab1.Main" />
       <module name="Lab1_HMO" />
-      <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance1.csv" />
+      <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance1.csv 2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="hr.fer.hmo.lab1.squad.*" />
@@ -96,10 +83,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Instance2" type="Application" factoryName="Application">
+    <configuration name="Instance1 Greedy" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.lab1.Main" />
       <module name="Lab1_HMO" />
-      <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance2.csv" />
+      <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance1.csv 1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="hr.fer.hmo.lab1.squad.*" />
@@ -110,10 +97,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Instance3" type="Application" factoryName="Application">
+    <configuration name="Instance2 GRASP" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.lab1.Main" />
       <module name="Lab1_HMO" />
-      <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance3.csv" />
+      <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance2.csv 2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hr.fer.hmo.lab1.squad.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Instance2 Greedy" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.lab1.Main" />
+      <module name="Lab1_HMO" />
+      <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance2.csv 1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hr.fer.hmo.lab1.squad.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Instance3 GRASP" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.lab1.Main" />
+      <module name="Lab1_HMO" />
+      <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance3.csv 2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hr.fer.hmo.lab1.squad.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Instance3 Greedy" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.lab1.Main" />
+      <module name="Lab1_HMO" />
+      <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance3.csv 1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="hr.fer.hmo.lab1.squad.*" />
@@ -125,13 +154,16 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Instance1" />
-      <item itemvalue="Application.Instance2" />
-      <item itemvalue="Application.Instance3" />
+      <item itemvalue="Application.Instance1 GRASP" />
+      <item itemvalue="Application.Instance1 Greedy" />
+      <item itemvalue="Application.Instance2 Greedy" />
+      <item itemvalue="Application.Instance2 GRASP" />
+      <item itemvalue="Application.Instance3 Greedy" />
+      <item itemvalue="Application.Instance3 GRASP" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Instance1" />
+        <item itemvalue="Application.Instance1 Greedy" />
       </list>
     </recent_temporary>
   </component>
@@ -145,8 +177,16 @@
       <updated>1666611764489</updated>
       <workItem from="1666611765642" duration="1728000" />
       <workItem from="1666639990645" duration="598000" />
-      <workItem from="1666641733775" duration="7886000" />
+      <workItem from="1666641733775" duration="13648000" />
     </task>
+    <task id="LOCAL-00001" summary="init and starting">
+      <created>1666649890515</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666649890515</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,12 +203,16 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init and starting" />
+    <option name="LAST_COMMIT_MESSAGE" value="init and starting" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/Main.java</url>
-          <line>50</line>
+          <line>62</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

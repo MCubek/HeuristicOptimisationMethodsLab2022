@@ -1,7 +1,11 @@
 package hr.fer.hmo.lab1;
 
+import hr.fer.hmo.lab1.algorithm.GraspSearchAlgorithm;
+import hr.fer.hmo.lab1.algorithm.GreedyLocalSearchAlgorithm;
+import hr.fer.hmo.lab1.algorithm.ISearchAlgorithm;
 import hr.fer.hmo.lab1.player.Player;
 import hr.fer.hmo.lab1.player.PlayerPosition;
+import hr.fer.hmo.lab1.squad.Squad;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -13,15 +17,23 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        if (args.length != 1) throw new IllegalArgumentException("Requires path of file as only argument");
+        if (args.length != 2)
+            throw new IllegalArgumentException("Requires path of file and algorithm number as only arguments");
+
+        ISearchAlgorithm algorithm = switch (args[1]) {
+            case "1" -> new GreedyLocalSearchAlgorithm();
+            case "2" -> new GraspSearchAlgorithm(new GreedyLocalSearchAlgorithm());
+            default -> throw new IllegalStateException("Unexpected algorithm: " + args[1]);
+        };
 
         Path file = Path.of(args[0]);
 
         try {
             List<Player> players = loadPlayers(file);
 
+            Squad solution = algorithm.search(players, null);
 
-
+            System.out.println(solution);
         } catch (IOException e) {
             System.err.println("Error while loading file.");
             e.printStackTrace();
