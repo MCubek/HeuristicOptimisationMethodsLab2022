@@ -122,6 +122,21 @@ public class Squad implements Iterable<Squad> {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Squad squad = (Squad) o;
+
+        return Arrays.equals(vectorRepresentation, squad.vectorRepresentation);
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(vectorRepresentation);
+    }
+
+    @Override
     public Iterator<Squad> iterator() {
         return new SquadNeighborhoodIterator(vectorRepresentation, players);
     }

@@ -33,15 +33,6 @@ public class Main {
         try {
             List<Player> players = loadPlayers(file);
 
-            Squad test = Squad.generateRandomValidSquad(players, new Random(), 11, 4);
-
-            for (var n : test) {
-                if (n.checkRule(SquadRules.allRules)) {
-                    System.out.println(n);
-                    System.out.println(n.getScore());
-                }
-            }
-
             Squad solution = algorithm.search(players, null);
 
             System.out.println(solution);

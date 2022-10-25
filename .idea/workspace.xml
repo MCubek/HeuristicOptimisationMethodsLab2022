@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6884bc6e-f481-4646-b889-6ac6b1007b7f" name="Changes" comment="work on neighborhood">
+    <list default="true" id="6884bc6e-f481-4646-b889-6ac6b1007b7f" name="Changes" comment="neighborhood finished">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GraspSearchAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GraspSearchAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GreedyLocalSearchAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GreedyLocalSearchAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/ISearchAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/ISearchAlgorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/Squad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/Squad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/SquadRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/SquadRules.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +59,7 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "configurable.group.appearance"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -67,7 +70,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Instance3 GRASP">
+  <component name="RunManager" selected="Application.Instance1 Greedy">
     <configuration name="Instance1 GRASP" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.lab1.Main" />
       <module name="Lab1_HMO" />
@@ -154,11 +157,11 @@
     </configuration>
     <list>
       <item itemvalue="Application.Instance1 GRASP" />
-      <item itemvalue="Application.Instance1 Greedy" />
       <item itemvalue="Application.Instance2 Greedy" />
       <item itemvalue="Application.Instance2 GRASP" />
       <item itemvalue="Application.Instance3 Greedy" />
       <item itemvalue="Application.Instance3 GRASP" />
+      <item itemvalue="Application.Instance1 Greedy" />
     </list>
     <recent_temporary>
       <list>
@@ -176,7 +179,8 @@
       <updated>1666611764489</updated>
       <workItem from="1666611765642" duration="1728000" />
       <workItem from="1666639990645" duration="598000" />
-      <workItem from="1666641733775" duration="21909000" />
+      <workItem from="1666641733775" duration="27205000" />
+      <workItem from="1666732556823" duration="38000" />
     </task>
     <task id="LOCAL-00001" summary="init and starting">
       <created>1666649890515</created>
@@ -199,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666698667271</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="neighborhood finished">
+      <created>1666704961021</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666704961021</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,26 +231,17 @@
     <MESSAGE value="init and starting" />
     <MESSAGE value="algorithm template" />
     <MESSAGE value="work on neighborhood" />
-    <option name="LAST_COMMIT_MESSAGE" value="work on neighborhood" />
+    <MESSAGE value="neighborhood finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="neighborhood finished" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/Squad.java</url>
-          <line>120</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <condition expression="visitedNumber == 15 &amp;&amp; j == vectorRepresentation.length" language="JAVA" />
-          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/Squad.java</url>
-          <line>148</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/Main.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="28" />
+          <condition expression="previousSquad.equals(squad)" language="JAVA" />
+          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GreedyLocalSearchAlgorithm.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -251,7 +253,13 @@
         <watch expression="singleTeamSizeRule.validate(activePlayers, reservePlayers)" />
         <watch expression="firstTeamFormationRule.validate(activePlayers, reservePlayers)" />
         <watch expression="secondTeamFormationRule.validate(activePlayers, reservePlayers)" />
+        <watch expression="neighbour.getScore()" />
+        <watch expression="squad.getScore()" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

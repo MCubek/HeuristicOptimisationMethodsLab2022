@@ -4,7 +4,7 @@ import hr.fer.hmo.lab1.player.Player;
 import hr.fer.hmo.lab1.squad.Squad;
 import lombok.RequiredArgsConstructor;
 
-import java.util.Collection;
+import java.util.List;
 
 /**
  * @author matejc
@@ -16,7 +16,7 @@ public class GraspSearchAlgorithm implements ISearchAlgorithm {
     private final ISearchAlgorithm localSearchAlgorithm;
 
     @Override
-    public Squad search(Collection<Player> players, Player startingPlayer) {
+    public Squad search(List<Player> players, Squad startingSquad) {
         return null;
     }
 }

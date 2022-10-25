@@ -3,7 +3,7 @@ package hr.fer.hmo.lab1.algorithm;
 import hr.fer.hmo.lab1.player.Player;
 import hr.fer.hmo.lab1.squad.Squad;
 
-import java.util.Collection;
+import java.util.List;
 
 /**
  * @author matejc
@@ -11,5 +11,5 @@ import java.util.Collection;
  */
 
 public interface ISearchAlgorithm {
-    Squad search(Collection<Player> players, Player startingPlayer);
+    Squad search(List<Player> players, Squad startingSquad);
 }
