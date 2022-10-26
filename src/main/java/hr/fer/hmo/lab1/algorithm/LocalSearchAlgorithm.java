@@ -3,9 +3,11 @@ package hr.fer.hmo.lab1.algorithm;
 import hr.fer.hmo.lab1.player.Player;
 import hr.fer.hmo.lab1.squad.ISquadRule;
 import hr.fer.hmo.lab1.squad.Squad;
+import hr.fer.hmo.lab1.squad.SquadGenerator;
 import hr.fer.hmo.lab1.squad.SquadRules;
+import lombok.RequiredArgsConstructor;
 
-import java.util.HashSet;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -14,11 +16,12 @@ import java.util.Random;
  * Created on 25.10.2022.
  */
 
-public class GreedyLocalSearchAlgorithm implements ISearchAlgorithm {
+@RequiredArgsConstructor
+public class LocalSearchAlgorithm implements ISearchAlgorithm {
 
-    public static final double P = 0.3;
-    public static final Random random = new Random();
-    public static final int MAX_ITERATIONS = 1_000;
+    public static final double P = 0.01;
+    public final int MAX_ITERATIONS;
+    public final Random random;
 
     public static final ISquadRule rule = SquadRules.allRules;
 
@@ -27,27 +30,22 @@ public class GreedyLocalSearchAlgorithm implements ISearchAlgorithm {
     public Squad search(List<Player> players, Squad startingSquad) {
         Squad squad = startingSquad;
 
-        HashSet<Squad> visited = new HashSet<>();
-
-        if (squad == null) squad = Squad.generateRandomValidSquad(players, random, 11, 4);
-
-        visited.add(squad);
+        if (squad == null) squad = SquadGenerator.generateRandomValidSquad(players, random, 11, 4);
 
         for (int i = 0; i < MAX_ITERATIONS; i++) {
 
-            Squad previousSquad = squad;
-
+            List<Squad> neighborhood = new ArrayList<>();
             for (var neighbour : squad) {
-                if (neighbour.checkRule(rule) && ! visited.contains(neighbour) &&
+                if (neighbour.checkRule(rule) &&
                     (random.nextFloat() < P || neighbour.getScore() > squad.getScore())) {
-                    squad = neighbour;
-                    break;
+                    neighborhood.add(neighbour);
                 }
             }
             System.out.println(squad.getScore());
-            visited.add(squad);
 
-            if (previousSquad.equals(squad)) break;
+            if (neighborhood.size() > 1) break;
+
+            squad = neighborhood.get(random.nextInt(0, neighborhood.size() - 1));
 
         }
         return squad;

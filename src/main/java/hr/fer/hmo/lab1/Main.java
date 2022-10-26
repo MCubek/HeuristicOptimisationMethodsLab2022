@@ -1,12 +1,12 @@
 package hr.fer.hmo.lab1;
 
 import hr.fer.hmo.lab1.algorithm.GraspSearchAlgorithm;
-import hr.fer.hmo.lab1.algorithm.GreedyLocalSearchAlgorithm;
+import hr.fer.hmo.lab1.algorithm.GreedyConstructionAlgorithm;
 import hr.fer.hmo.lab1.algorithm.ISearchAlgorithm;
+import hr.fer.hmo.lab1.algorithm.LocalSearchAlgorithm;
 import hr.fer.hmo.lab1.player.Player;
 import hr.fer.hmo.lab1.player.PlayerPosition;
 import hr.fer.hmo.lab1.squad.Squad;
-import hr.fer.hmo.lab1.squad.SquadRules;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -22,9 +22,13 @@ public class Main {
         if (args.length != 2)
             throw new IllegalArgumentException("Requires path of file and algorithm number as only arguments");
 
+        Random random = new Random();
+        LocalSearchAlgorithm localSearchAlgorithm = new LocalSearchAlgorithm(10_000, random);
+
         ISearchAlgorithm algorithm = switch (args[1]) {
-            case "1" -> new GreedyLocalSearchAlgorithm();
-            case "2" -> new GraspSearchAlgorithm(new GreedyLocalSearchAlgorithm());
+            case "1" -> localSearchAlgorithm;
+            case "2" ->
+                    new GraspSearchAlgorithm(localSearchAlgorithm, new GreedyConstructionAlgorithm(0.2, random), 10, random);
             default -> throw new IllegalStateException("Unexpected algorithm: " + args[1]);
         };
 

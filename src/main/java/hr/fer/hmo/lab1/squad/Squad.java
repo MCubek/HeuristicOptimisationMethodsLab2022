@@ -32,7 +32,7 @@ public class Squad implements Iterable<Squad> {
         this.vectorRepresentation = new int[players.size()];
     }
 
-    private Squad(int[] vectorRepresentation, List<Player> players) {
+    Squad(int[] vectorRepresentation, List<Player> players) {
         this.players = players;
         this.activePlayers = getActivePlayersFromVector(vectorRepresentation);
         this.reservePlayers = getReservePlayersFromVector(vectorRepresentation);
@@ -141,84 +141,4 @@ public class Squad implements Iterable<Squad> {
         return new SquadNeighborhoodIterator(vectorRepresentation, players);
     }
 
-    public static class SquadNeighborhoodIterator implements Iterator<Squad> {
-
-        private final int[] vectorRepresentation;
-        private final List<Player> players;
-
-        private int i;
-        private int j;
-
-        private int visitedNumber = 0;
-
-        public SquadNeighborhoodIterator(int[] vectorRepresentation, List<Player> players) {
-            this.vectorRepresentation = vectorRepresentation;
-            this.players = players;
-
-            i = 0;
-            j = vectorRepresentation.length;
-        }
-
-        @Override
-        public boolean hasNext() {
-            return visitedNumber != 15 || j < vectorRepresentation.length;
-        }
-
-        @Override
-        public Squad next() {
-            if (! hasNext()) throw new NoSuchElementException();
-
-            if (j >= vectorRepresentation.length) {
-                while (vectorRepresentation[i] == 0) {
-                    i++;
-                }
-                visitedNumber++;
-                j = 0;
-            }
-
-            try {
-                while (i == j || vectorRepresentation[j] != 0) {
-                    j++;
-                }
-            } catch (IndexOutOfBoundsException e) {
-                return new Squad(vectorRepresentation, players);
-            }
-
-            int[] newVector = Arrays.copyOf(vectorRepresentation, vectorRepresentation.length);
-            newVector[j] = vectorRepresentation[i];
-            newVector[i] = 0;
-
-            j++;
-            return new Squad(newVector, players);
-        }
-    }
-
-    public static Squad generateRandomValidSquad(List<Player> players, Random random, int activePlayersCount, int reservePlayersCount) {
-
-        Squad squad;
-        do {
-            squad = new Squad(activePlayersCount, reservePlayersCount, players);
-
-            var pickedPlayers = random.ints(0, players.size() - 1)
-                    .distinct()
-                    .limit((long) activePlayersCount + reservePlayersCount)
-                    .mapToObj(players::get)
-                    .toList();
-
-            var activePlayers = random.ints(0, pickedPlayers.size() - 1)
-                    .distinct()
-                    .limit(activePlayersCount)
-                    .mapToObj(pickedPlayers::get)
-                    .toList();
-
-            var reservePlayers = new ArrayList<>(pickedPlayers);
-            reservePlayers.removeAll(activePlayers);
-
-
-            activePlayers.forEach(squad::addActivePlayer);
-            reservePlayers.forEach(squad::addReservePlayer);
-        } while (! squad.checkRule(SquadRules.allRules));
-
-        return squad;
-    }
 }
