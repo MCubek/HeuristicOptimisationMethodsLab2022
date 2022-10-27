@@ -66,7 +66,7 @@ public class Squad implements Iterable<Squad> {
 
     public boolean addActivePlayer(Player player) {
         if (activePlayers.size() < activePlayersCount) {
-            this.vectorRepresentation[player.getId()] = 1;
+            this.vectorRepresentation[player.getId() - 1] = 1;
             return activePlayers.add(player);
         } else return false;
 
@@ -74,19 +74,23 @@ public class Squad implements Iterable<Squad> {
 
     public boolean addReservePlayer(Player player) {
         if (reservePlayers.size() < reservePlayersCount) {
-            this.vectorRepresentation[player.getId()] = 2;
+            this.vectorRepresentation[player.getId() - 1] = 2;
             return reservePlayers.add(player);
         } else return false;
     }
 
     public boolean removeActivePlayer(Player player) {
-        this.vectorRepresentation[player.getId()] = 0;
+        this.vectorRepresentation[player.getId() - 1] = 0;
         return activePlayers.remove(player);
     }
 
     public boolean removeReservePlayer(Player player) {
-        this.vectorRepresentation[player.getId()] = 0;
+        this.vectorRepresentation[player.getId() - 1] = 0;
         return reservePlayers.remove(player);
+    }
+
+    public boolean isPlayerInSquad(Player player) {
+        return activePlayers.contains(player) || reservePlayers.contains(player);
     }
 
     public double getCost() {
