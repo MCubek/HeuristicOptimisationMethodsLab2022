@@ -115,12 +115,12 @@ public class Squad implements Iterable<Squad> {
                 .map(Player::getId)
                 .sorted()
                 .map(String::valueOf)
-                .collect(Collectors.joining(" "));
+                .collect(Collectors.joining(","));
         String reserve = reservePlayers.stream()
                 .map(Player::getId)
                 .sorted()
                 .map(String::valueOf)
-                .collect(Collectors.joining(" "));
+                .collect(Collectors.joining(","));
 
         return "%s%n%s%n".formatted(active, reserve);
     }
