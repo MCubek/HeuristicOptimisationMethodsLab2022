@@ -23,12 +23,12 @@ public class Main {
             throw new IllegalArgumentException("Requires path of file and algorithm number as only arguments");
 
         Random random = new Random();
-        LocalSearchAlgorithm localSearchAlgorithm = new LocalSearchAlgorithm(10_000, random);
+        ISearchAlgorithm localSearchAlgorithm = new LocalSearchAlgorithm(10_000, random);
+        ISearchAlgorithm constructionAlgorithm = new GreedyConstructionAlgorithm(0.6, random);
 
         ISearchAlgorithm algorithm = switch (args[1]) {
-            case "1" -> localSearchAlgorithm;
-            case "2" ->
-                    new GraspSearchAlgorithm(localSearchAlgorithm, new GreedyConstructionAlgorithm(0.6, random), 10, random);
+            case "1" -> constructionAlgorithm;
+            case "2" -> new GraspSearchAlgorithm(localSearchAlgorithm, constructionAlgorithm, 10, random);
             default -> throw new IllegalStateException("Unexpected algorithm: " + args[1]);
         };
 
@@ -38,6 +38,8 @@ public class Main {
             List<Player> players = loadPlayers(file);
 
             Squad solution = algorithm.search(players, null);
+
+            System.out.printf("Score = %d, cost = %.1f%n", solution.getScore(), solution.getCost());
 
             System.out.println(solution);
         } catch (IOException e) {

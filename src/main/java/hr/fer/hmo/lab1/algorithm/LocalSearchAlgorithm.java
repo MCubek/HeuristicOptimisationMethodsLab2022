@@ -41,7 +41,6 @@ public class LocalSearchAlgorithm implements ISearchAlgorithm {
                     neighborhood.add(neighbour);
                 }
             }
-            System.out.println(squad.getScore());
 
             if (neighborhood.size() > 1) break;
 
