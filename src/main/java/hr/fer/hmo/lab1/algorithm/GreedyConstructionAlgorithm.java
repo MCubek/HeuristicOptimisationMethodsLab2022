@@ -24,6 +24,8 @@ public class GreedyConstructionAlgorithm implements ISearchAlgorithm {
     private final double alpha;
     private final Random random;
 
+    private final double DOUBLE_ERROR = 1E-5;
+
     private final Function<Player, Double> playerValueFunction = p -> p.getPoints() / p.getPrice();
     private final Function<Player, Double> playerInversePriceFunction = p -> 1 / p.getPrice();
 
@@ -136,7 +138,7 @@ public class GreedyConstructionAlgorithm implements ISearchAlgorithm {
         return players.stream()
                 .filter(playerPredicate)
                 .filter(p -> playerValidInSquadRule.test(squad, p))
-                .filter(p -> costFunction.apply(p) >= limit)
+                .filter(p -> costFunction.apply(p) >= limit - DOUBLE_ERROR)
                 .collect(Collectors.toCollection(ArrayList::new));
     }
 
