@@ -29,7 +29,7 @@ public class Main {
 
         ISearchAlgorithm algorithm = switch (args[1]) {
             case "1" -> greedyAlgorithm;
-            case "2" -> new GraspSearchAlgorithm(localSearchAlgorithm, constructionAlgorithm, 1000);
+            case "2" -> new GraspSearchAlgorithm(localSearchAlgorithm, constructionAlgorithm, 10);
             default -> throw new IllegalStateException("Unexpected algorithm: " + args[1]);
         };
 
