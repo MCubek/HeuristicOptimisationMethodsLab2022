@@ -5,7 +5,6 @@ import hr.fer.hmo.lab1.squad.ISquadRule;
 import hr.fer.hmo.lab1.squad.Squad;
 import hr.fer.hmo.lab1.squad.SquadGenerator;
 import hr.fer.hmo.lab1.squad.SquadRules;
-import lombok.RequiredArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,12 +15,8 @@ import java.util.Random;
  * Created on 25.10.2022.
  */
 
-@RequiredArgsConstructor
-public class LocalSearchAlgorithm implements ISearchAlgorithm {
 
-    public static final double P = 0.01;
-    public final int MAX_ITERATIONS;
-    public final Random random;
+public record LocalSearchAlgorithm(int MAX_ITERATIONS, Random random) implements ISearchAlgorithm {
 
     public static final ISquadRule rule = SquadRules.allRules;
 
@@ -37,14 +32,14 @@ public class LocalSearchAlgorithm implements ISearchAlgorithm {
             List<Squad> neighborhood = new ArrayList<>();
             for (var neighbour : squad) {
                 if (neighbour.checkRule(rule) &&
-                    (random.nextFloat() < P || neighbour.getScore() > squad.getScore())) {
+                    (neighbour.getScore() > squad.getScore())) {
                     neighborhood.add(neighbour);
                 }
             }
 
-            if (neighborhood.size() > 1) break;
+            if (neighborhood.isEmpty()) break;
 
-            squad = neighborhood.get(random.nextInt(0, neighborhood.size() - 1));
+            squad = neighborhood.get(random.nextInt(neighborhood.size()));
 
         }
         return squad;

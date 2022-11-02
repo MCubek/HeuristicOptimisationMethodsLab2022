@@ -3,7 +3,6 @@ package hr.fer.hmo.lab1.player;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author matejc

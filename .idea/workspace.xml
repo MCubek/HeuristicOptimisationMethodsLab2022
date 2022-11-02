@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6884bc6e-f481-4646-b889-6ac6b1007b7f" name="Changes" comment="main added work">
+    <list default="true" id="6884bc6e-f481-4646-b889-6ac6b1007b7f" name="Changes" comment="fixed string output">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GraspSearchAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GraspSearchAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GreedyConstructionAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GreedyConstructionAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/LocalSearchAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/LocalSearchAlgorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/Squad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/Squad.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +59,7 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "com.maddyhome.idea.vim.ui.VimEmulationConfigurable"
+    "settings.editor.selected.configurable": "editor.preferences.gutterIcons"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -182,7 +188,8 @@
       <workItem from="1666641733775" duration="27205000" />
       <workItem from="1666732556823" duration="38000" />
       <workItem from="1666732605370" duration="57000" />
-      <workItem from="1666732668188" duration="21698000" />
+      <workItem from="1666732668188" duration="22002000" />
+      <workItem from="1667407894016" duration="3802000" />
     </task>
     <task id="LOCAL-00001" summary="init and starting">
       <created>1666649890515</created>
@@ -240,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666880703873</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fixed string output">
+      <created>1666881190351</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1666881190351</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,21 +279,24 @@
     <MESSAGE value="work" />
     <MESSAGE value="rcl added" />
     <MESSAGE value="main added work" />
-    <option name="LAST_COMMIT_MESSAGE" value="main added work" />
+    <MESSAGE value="fixed string output" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed string output" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint enabled="true" suspend="NONE" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/LocalSearchAlgorithm.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="34" />
+          <line>35</line>
+          <log-expression expression="neighbour.getScore()" language="JAVA" />
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="generatedSquad.getScore()" language="JAVA" />
+        <watch expression="generatedSquad.getCost()" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

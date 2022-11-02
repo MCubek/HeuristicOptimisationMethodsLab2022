@@ -24,11 +24,12 @@ public class Main {
 
         Random random = new Random();
         ISearchAlgorithm localSearchAlgorithm = new LocalSearchAlgorithm(10_000, random);
-        ISearchAlgorithm constructionAlgorithm = new GreedyConstructionAlgorithm(0.6, random);
+        ISearchAlgorithm greedyAlgorithm = new GreedyConstructionAlgorithm(1, random);
+        ISearchAlgorithm constructionAlgorithm = new GreedyConstructionAlgorithm(0.8, random);
 
         ISearchAlgorithm algorithm = switch (args[1]) {
-            case "1" -> constructionAlgorithm;
-            case "2" -> new GraspSearchAlgorithm(localSearchAlgorithm, constructionAlgorithm, 10, random);
+            case "1" -> greedyAlgorithm;
+            case "2" -> new GraspSearchAlgorithm(localSearchAlgorithm, constructionAlgorithm, 10);
             default -> throw new IllegalStateException("Unexpected algorithm: " + args[1]);
         };
 

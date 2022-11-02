@@ -1,7 +1,6 @@
 package hr.fer.hmo.lab1.squad;
 
 import hr.fer.hmo.lab1.player.Player;
-import lombok.Getter;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -12,7 +11,6 @@ import java.util.stream.Stream;
  * Created on 24.10.2022.
  */
 
-@Getter
 public class Squad implements Iterable<Squad> {
     private final Set<Player> activePlayers;
     private final Set<Player> reservePlayers;
@@ -64,29 +62,19 @@ public class Squad implements Iterable<Squad> {
         return reservePlayersSet;
     }
 
-    public boolean addActivePlayer(Player player) {
+    public void addActivePlayer(Player player) {
         if (activePlayers.size() < activePlayersCount) {
             this.vectorRepresentation[player.getId() - 1] = 1;
-            return activePlayers.add(player);
-        } else return false;
+            activePlayers.add(player);
+        }
 
     }
 
-    public boolean addReservePlayer(Player player) {
+    public void addReservePlayer(Player player) {
         if (reservePlayers.size() < reservePlayersCount) {
             this.vectorRepresentation[player.getId() - 1] = 2;
-            return reservePlayers.add(player);
-        } else return false;
-    }
-
-    public boolean removeActivePlayer(Player player) {
-        this.vectorRepresentation[player.getId() - 1] = 0;
-        return activePlayers.remove(player);
-    }
-
-    public boolean removeReservePlayer(Player player) {
-        this.vectorRepresentation[player.getId() - 1] = 0;
-        return reservePlayers.remove(player);
+            reservePlayers.add(player);
+        }
     }
 
     public boolean isPlayerInSquad(Player player) {
@@ -107,6 +95,11 @@ public class Squad implements Iterable<Squad> {
 
     public boolean checkRule(ISquadRule rule) {
         return rule.validate(activePlayers, reservePlayers);
+    }
+
+    public Map<String, Long> clubCounts() {
+        return Stream.concat(activePlayers.stream(), reservePlayers.stream())
+                .collect(Collectors.groupingBy(Player::getClub, Collectors.counting()));
     }
 
     @Override
