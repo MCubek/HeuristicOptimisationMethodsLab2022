@@ -18,18 +18,23 @@ import java.util.Random;
 
 public class Main {
 
+    private static final double ALPHA = 0.8;
+    private static final double BETA = 1.69;
+    private static final int MAX_ITERATIONS_LOCAL_SEARCH = 10_000;
+    private static final int MAX_ITERATIONS_GRASP = 10;
+
     public static void main(String[] args) {
         if (args.length != 2)
             throw new IllegalArgumentException("Requires path of file and algorithm number as only arguments");
 
         Random random = new Random();
-        ISearchAlgorithm localSearchAlgorithm = new LocalSearchAlgorithm(10_000, random);
-        ISearchAlgorithm greedyAlgorithm = new GreedyConstructionAlgorithm(1, random);
-        ISearchAlgorithm constructionAlgorithm = new GreedyConstructionAlgorithm(0.8, random);
+        ISearchAlgorithm localSearchAlgorithm = new LocalSearchAlgorithm(MAX_ITERATIONS_LOCAL_SEARCH, random);
+        ISearchAlgorithm greedyAlgorithm = new GreedyConstructionAlgorithm(1, BETA, random);
+        ISearchAlgorithm constructionAlgorithm = new GreedyConstructionAlgorithm(ALPHA, BETA, random);
 
         ISearchAlgorithm algorithm = switch (args[1]) {
             case "1" -> greedyAlgorithm;
-            case "2" -> new GraspSearchAlgorithm(localSearchAlgorithm, constructionAlgorithm, 10);
+            case "2" -> new GraspSearchAlgorithm(localSearchAlgorithm, constructionAlgorithm, MAX_ITERATIONS_GRASP);
             default -> throw new IllegalStateException("Unexpected algorithm: " + args[1]);
         };
 

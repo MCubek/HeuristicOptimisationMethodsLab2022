@@ -22,11 +22,12 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class GreedyConstructionAlgorithm implements ISearchAlgorithm {
     private final double alpha;
+    private final double beta;
     private final Random random;
 
-    private final double DOUBLE_ERROR = 1E-5;
+    private static final double DOUBLE_ERROR = 1E-5;
 
-    private final Function<Player, Double> playerValueFunction = p -> p.getPoints() / p.getPrice();
+    private final Function<Player, Double> playerValueFunction = p -> Math.pow(p.getPoints(), beta) / p.getPrice();
     private final Function<Player, Double> playerInversePriceFunction = p -> 1 / p.getPrice();
 
     private final BiPredicate<Squad, Player> playerValidInSquadRule = (s, p) -> ! s.isPlayerInSquad(p)
