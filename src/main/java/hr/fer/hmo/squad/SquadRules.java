@@ -1,7 +1,7 @@
-package hr.fer.hmo.lab1.squad;
+package hr.fer.hmo.squad;
 
-import hr.fer.hmo.lab1.player.Player;
-import hr.fer.hmo.lab1.player.PlayerPosition;
+import hr.fer.hmo.player.Player;
+import hr.fer.hmo.player.PlayerPosition;
 
 import java.util.stream.Collectors;
 import java.util.stream.Stream;

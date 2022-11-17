@@ -9,18 +9,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6884bc6e-f481-4646-b889-6ac6b1007b7f" name="Changes" comment="improvement">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/SquadNeighborhoodDualIterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/util/LoadUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="6884bc6e-f481-4646-b889-6ac6b1007b7f" name="Changes" comment="improvement on lab1">
       <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/Lab1Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GraspSearchAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GraspSearchAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GreedyConstructionAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GreedyConstructionAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/LocalSearchAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/LocalSearchAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/Squad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/Squad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/SquadNeighborhoodIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/SquadNeighborhoodSingleIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/Lab1Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/Lab1Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GraspSearchAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/GraspSearchAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GreedyConstructionAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/GreedyConstructionAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/ISearchAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/ISearchAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/LocalSearchAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/LocalSearchAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/player/PlayerPosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/player/PlayerPosition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/ISquadRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/ISquadRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/Squad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/Squad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/SquadGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/SquadGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/SquadNeighborhoodSingleIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/SquadNeighborhoodSingleIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/SquadRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/SquadRules.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/util/LoadUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/util/LoadUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +207,7 @@
       <workItem from="1666732668188" duration="22002000" />
       <workItem from="1667407894016" duration="3879000" />
       <workItem from="1667420102742" duration="4642000" />
-      <workItem from="1668691582168" duration="5350000" />
+      <workItem from="1668691582168" duration="5676000" />
     </task>
     <task id="LOCAL-00001" summary="init and starting">
       <created>1666649890515</created>
@@ -311,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668692614589</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="improvement on lab1">
+      <created>1668697978307</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1668697978307</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,41 +352,31 @@
     <MESSAGE value="number of iters" />
     <MESSAGE value="files" />
     <MESSAGE value="improvement" />
-    <option name="LAST_COMMIT_MESSAGE" value="improvement" />
+    <MESSAGE value="improvement on lab1" />
+    <option name="LAST_COMMIT_MESSAGE" value="improvement on lab1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="java-line">
           <condition expression="players.stream()                 .filter(playerPredicate)                 .filter(p -&gt; playerValidInSquadRule.test(squad, p))                 .filter(p -&gt; costFunction.apply(p) &gt;= limit)                 .collect(Collectors.toCollection(ArrayList::new)).isEmpty()" language="JAVA" />
-          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GreedyConstructionAlgorithm.java</url>
-          <line>143</line>
+          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/GreedyConstructionAlgorithm.java</url>
+          <line>142</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint suspend="NONE" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GraspSearchAlgorithm.java</url>
-          <line>31</line>
+          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/GraspSearchAlgorithm.java</url>
+          <line>28</line>
           <log-expression expression="bestSquad" language="JAVA" />
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <condition expression="!mainIterator.hasNext()" language="JAVA" />
-          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/SquadNeighborhoodDualIterator.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" log-message="true" suspend="NONE" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/SquadNeighborhoodDualIterator.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="59" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/LocalSearchAlgorithm.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/LocalSearchAlgorithm.java</url>
           <line>38</line>
           <option name="timeStamp" value="61" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/LocalSearchAlgorithm.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/LocalSearchAlgorithm.java</url>
           <line>32</line>
           <option name="timeStamp" value="62" />
         </line-breakpoint>

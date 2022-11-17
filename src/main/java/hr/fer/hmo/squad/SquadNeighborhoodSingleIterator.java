@@ -1,6 +1,6 @@
-package hr.fer.hmo.lab1.squad;
+package hr.fer.hmo.squad;
 
-import hr.fer.hmo.lab1.player.Player;
+import hr.fer.hmo.player.Player;
 
 import java.util.Arrays;
 import java.util.Iterator;

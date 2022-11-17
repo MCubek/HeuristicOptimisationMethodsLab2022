@@ -1,7 +1,7 @@
-package hr.fer.hmo.lab1.util;
+package hr.fer.hmo.util;
 
-import hr.fer.hmo.lab1.player.Player;
-import hr.fer.hmo.lab1.player.PlayerPosition;
+import hr.fer.hmo.player.Player;
+import hr.fer.hmo.player.PlayerPosition;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;

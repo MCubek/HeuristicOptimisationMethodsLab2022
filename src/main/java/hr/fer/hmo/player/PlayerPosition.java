@@ -1,4 +1,4 @@
-package hr.fer.hmo.lab1.player;
+package hr.fer.hmo.player;
 
 import java.util.Collections;
 import java.util.HashMap;

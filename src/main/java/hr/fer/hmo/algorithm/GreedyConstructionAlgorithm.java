@@ -1,9 +1,9 @@
-package hr.fer.hmo.lab1.algorithm;
+package hr.fer.hmo.algorithm;
 
-import hr.fer.hmo.lab1.player.Player;
-import hr.fer.hmo.lab1.player.PlayerPosition;
-import hr.fer.hmo.lab1.squad.Squad;
-import hr.fer.hmo.lab1.squad.SquadRules;
+import hr.fer.hmo.player.Player;
+import hr.fer.hmo.player.PlayerPosition;
+import hr.fer.hmo.squad.Squad;
+import hr.fer.hmo.squad.SquadRules;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,12 +1,12 @@
-package hr.fer.hmo.lab1;
+package hr.fer.hmo;
 
-import hr.fer.hmo.lab1.algorithm.GraspSearchAlgorithm;
-import hr.fer.hmo.lab1.algorithm.GreedyConstructionAlgorithm;
-import hr.fer.hmo.lab1.algorithm.ISearchAlgorithm;
-import hr.fer.hmo.lab1.algorithm.LocalSearchAlgorithm;
-import hr.fer.hmo.lab1.player.Player;
-import hr.fer.hmo.lab1.squad.Squad;
-import hr.fer.hmo.lab1.util.LoadUtil;
+import hr.fer.hmo.algorithm.GraspSearchAlgorithm;
+import hr.fer.hmo.algorithm.GreedyConstructionAlgorithm;
+import hr.fer.hmo.algorithm.ISearchAlgorithm;
+import hr.fer.hmo.algorithm.LocalSearchAlgorithm;
+import hr.fer.hmo.player.Player;
+import hr.fer.hmo.squad.Squad;
+import hr.fer.hmo.util.LoadUtil;
 
 import java.io.IOException;
 import java.nio.file.Path;
