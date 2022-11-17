@@ -11,7 +11,7 @@ import java.util.NoSuchElementException;
  * @author matejc
  * Created on 26.10.2022.
  */
-public class SquadNeighborhoodIterator implements Iterator<Squad> {
+public class SquadNeighborhoodSingleIterator implements Iterator<Squad> {
 
     private final int[] vectorRepresentation;
     private final List<Player> players;
@@ -21,7 +21,7 @@ public class SquadNeighborhoodIterator implements Iterator<Squad> {
 
     private int visitedNumber = 0;
 
-    public SquadNeighborhoodIterator(int[] vectorRepresentation, List<Player> players) {
+    public SquadNeighborhoodSingleIterator(int[] vectorRepresentation, List<Player> players) {
         this.vectorRepresentation = vectorRepresentation;
         this.players = players;
 

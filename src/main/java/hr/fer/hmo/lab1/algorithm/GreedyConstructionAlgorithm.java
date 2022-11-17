@@ -4,7 +4,6 @@ import hr.fer.hmo.lab1.player.Player;
 import hr.fer.hmo.lab1.player.PlayerPosition;
 import hr.fer.hmo.lab1.squad.Squad;
 import hr.fer.hmo.lab1.squad.SquadRules;
-import lombok.RequiredArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,15 +18,20 @@ import java.util.stream.Collectors;
  * Created on 26.10.2022.
  */
 
-@RequiredArgsConstructor
 public class GreedyConstructionAlgorithm implements ISearchAlgorithm {
     private final double alpha;
-    private final double beta;
     private final Random random;
 
     private static final double DOUBLE_ERROR = 1E-5;
 
-    private final Function<Player, Double> playerValueFunction = p -> Math.pow(p.getPoints(), beta) / p.getPrice();
+    public GreedyConstructionAlgorithm(double alpha, double beta, Random random) {
+        this.alpha = alpha;
+        this.random = random;
+
+        this.playerValueFunction = p -> Math.pow(p.getPoints(), beta) / p.getPrice();
+    }
+
+    private final Function<Player, Double> playerValueFunction;
     private final Function<Player, Double> playerInversePriceFunction = p -> 1 / p.getPrice();
 
     private final BiPredicate<Squad, Player> playerValidInSquadRule = (s, p) -> ! s.isPlayerInSquad(p)

@@ -9,11 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6884bc6e-f481-4646-b889-6ac6b1007b7f" name="Changes" comment="files">
+    <list default="true" id="6884bc6e-f481-4646-b889-6ac6b1007b7f" name="Changes" comment="improvement">
+      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/SquadNeighborhoodDualIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/util/LoadUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/Lab1Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GraspSearchAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GraspSearchAlgorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GreedyConstructionAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GreedyConstructionAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/LocalSearchAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/LocalSearchAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/Squad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/Squad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/SquadNeighborhoodIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/SquadNeighborhoodSingleIterator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,15 +79,19 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="hr.fer.hmo.lab1.util.LoadUtil" />
       <recent name="hr.fer.hmo.lab1.squad.SquadGenerator" />
     </key>
     <key name="MoveInnerDialog.RECENTS_KEY">
       <recent name="hr.fer.hmo.lab1.squad" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="hr.fer.hmo.lab1.squad" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Instance1 GRASP">
     <configuration name="Instance1 GRASP" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.lab1.Main" />
+      <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.lab1.Lab1Main" />
       <module name="Lab1_HMO" />
       <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance1.csv 2" />
       <extension name="coverage">
@@ -94,7 +105,7 @@
       </method>
     </configuration>
     <configuration name="Instance1 Greedy" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.lab1.Main" />
+      <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.lab1.Lab1Main" />
       <module name="Lab1_HMO" />
       <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance1.csv 1" />
       <extension name="coverage">
@@ -108,7 +119,7 @@
       </method>
     </configuration>
     <configuration name="Instance2 GRASP" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.lab1.Main" />
+      <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.lab1.Lab1Main" />
       <module name="Lab1_HMO" />
       <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance2.csv 2" />
       <extension name="coverage">
@@ -122,7 +133,7 @@
       </method>
     </configuration>
     <configuration name="Instance2 Greedy" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.lab1.Main" />
+      <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.lab1.Lab1Main" />
       <module name="Lab1_HMO" />
       <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance2.csv 1" />
       <extension name="coverage">
@@ -136,7 +147,7 @@
       </method>
     </configuration>
     <configuration name="Instance3 GRASP" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.lab1.Main" />
+      <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.lab1.Lab1Main" />
       <module name="Lab1_HMO" />
       <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance3.csv 2" />
       <extension name="coverage">
@@ -150,7 +161,7 @@
       </method>
     </configuration>
     <configuration name="Instance3 Greedy" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.lab1.Main" />
+      <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.lab1.Lab1Main" />
       <module name="Lab1_HMO" />
       <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance3.csv 1" />
       <extension name="coverage">
@@ -193,7 +204,7 @@
       <workItem from="1666732668188" duration="22002000" />
       <workItem from="1667407894016" duration="3879000" />
       <workItem from="1667420102742" duration="4642000" />
-      <workItem from="1668691582168" duration="1016000" />
+      <workItem from="1668691582168" duration="5350000" />
     </task>
     <task id="LOCAL-00001" summary="init and starting">
       <created>1666649890515</created>
@@ -293,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667425590654</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="improvement">
+      <created>1668692614589</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1668692614589</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,34 +341,44 @@
     <MESSAGE value="fixes" />
     <MESSAGE value="number of iters" />
     <MESSAGE value="files" />
-    <option name="LAST_COMMIT_MESSAGE" value="files" />
+    <MESSAGE value="improvement" />
+    <option name="LAST_COMMIT_MESSAGE" value="improvement" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint suspend="NONE" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/LocalSearchAlgorithm.java</url>
-          <line>35</line>
-          <log-expression expression="neighbour.getScore()" language="JAVA" />
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
         <line-breakpoint type="java-line">
           <condition expression="players.stream()                 .filter(playerPredicate)                 .filter(p -&gt; playerValidInSquadRule.test(squad, p))                 .filter(p -&gt; costFunction.apply(p) &gt;= limit)                 .collect(Collectors.toCollection(ArrayList::new)).isEmpty()" language="JAVA" />
           <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GreedyConstructionAlgorithm.java</url>
-          <line>138</line>
+          <line>143</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint suspend="NONE" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GraspSearchAlgorithm.java</url>
-          <line>28</line>
+          <line>31</line>
           <log-expression expression="bestSquad" language="JAVA" />
           <option name="timeStamp" value="46" />
         </line-breakpoint>
-        <line-breakpoint suspend="NONE" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/GraspSearchAlgorithm.java</url>
-          <line>24</line>
-          <log-expression expression="i" language="JAVA" />
-          <option name="timeStamp" value="48" />
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="!mainIterator.hasNext()" language="JAVA" />
+          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/SquadNeighborhoodDualIterator.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" log-message="true" suspend="NONE" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/squad/SquadNeighborhoodDualIterator.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/LocalSearchAlgorithm.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/lab1/algorithm/LocalSearchAlgorithm.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="62" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -358,6 +386,8 @@
       <configuration name="Application">
         <watch expression="generatedSquad.getScore()" language="JAVA" />
         <watch expression="generatedSquad.getCost()" language="JAVA" />
+        <watch expression="neighbour.getScore()" />
+        <watch expression="squad.getScore()" />
       </configuration>
     </watches-manager>
   </component>

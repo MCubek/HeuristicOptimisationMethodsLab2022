@@ -6,7 +6,6 @@ import hr.fer.hmo.lab1.squad.Squad;
 import hr.fer.hmo.lab1.squad.SquadGenerator;
 import hr.fer.hmo.lab1.squad.SquadRules;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -29,17 +28,18 @@ public record LocalSearchAlgorithm(int MAX_ITERATIONS, Random random) implements
 
         for (int i = 0; i < MAX_ITERATIONS; i++) {
 
-            List<Squad> neighborhood = new ArrayList<>();
-            for (var neighbour : squad) {
-                if (neighbour.checkRule(rule) &&
-                    (neighbour.getScore() > squad.getScore())) {
-                    neighborhood.add(neighbour);
-                }
-            }
+            var squadScore = squad.getScore();
 
-            if (neighborhood.isEmpty()) break;
+            List<Squad> betterNeighbours = squad.getNeighboursList()
+                    .parallelStream()
+                    .flatMap(neighbour -> neighbour.getNeighboursList().parallelStream())
+                    .filter(neighbour -> neighbour.getScore() > squadScore && neighbour.checkRule(rule))
+                    .toList();
 
-            squad = neighborhood.get(random.nextInt(neighborhood.size()));
+            if (betterNeighbours.isEmpty()) break;
+
+            squad = betterNeighbours.get(random.nextInt(betterNeighbours.size()));
+            System.out.printf("Local Search iter %d, score %d.%n", i + 1, squad.getScore());
 
         }
         return squad;

@@ -81,6 +81,10 @@ public class Squad implements Iterable<Squad> {
         return activePlayers.contains(player) || reservePlayers.contains(player);
     }
 
+    int[] getVectorRepresentation() {
+        return vectorRepresentation;
+    }
+
     public double getCost() {
         return Stream.concat(activePlayers.stream(), reservePlayers.stream())
                 .mapToDouble(Player::getPrice)
@@ -135,7 +139,15 @@ public class Squad implements Iterable<Squad> {
 
     @Override
     public Iterator<Squad> iterator() {
-        return new SquadNeighborhoodIterator(vectorRepresentation, players);
+        return new SquadNeighborhoodSingleIterator(vectorRepresentation, players);
+    }
+
+    public List<Squad> getNeighboursList() {
+        List<Squad> list = new ArrayList<>();
+        for (var neighbour : this) {
+            list.add(neighbour);
+        }
+        return list;
     }
 
 }
