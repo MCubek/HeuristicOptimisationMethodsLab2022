@@ -32,7 +32,6 @@ public record LocalSearchAlgorithm(int MAX_ITERATIONS, Random random) implements
 
             List<Squad> betterNeighbours = squad.getNeighboursList()
                     .parallelStream()
-                    .flatMap(neighbour -> neighbour.getNeighboursList().parallelStream())
                     .filter(neighbour -> neighbour.getScore() > squadScore && neighbour.checkRule(rule))
                     .toList();
 

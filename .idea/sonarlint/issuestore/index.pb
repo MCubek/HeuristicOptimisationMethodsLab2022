@@ -24,15 +24,9 @@ D
 META-INF/MANIFEST.MF,2/e/2e8cf92205ec303e7304888d382cb6a8cf5f56ba
 h
 8src/main/java/hr/fer/hmo/algorithm/ISearchAlgorithm.java,1/e/1e7aef4356dd59945f409bbc24fe65e0db63f0a1
-^
-.src/main/java/hr/fer/hmo/squad/ISquadRule.java,3/e/3e1dc26d22a3275e06833c6a0011b77d67f48275
 [
 +src/main/java/hr/fer/hmo/util/LoadUtil.java,3/c/3c46c5abd863b6421bf5d51853973dc3ea3db887
 [
 +src/main/java/hr/fer/hmo/player/Player.java,4/f/4f36310a40523b9ce11a8df2248e4988cf2f2156
 c
 3src/main/java/hr/fer/hmo/player/PlayerPosition.java,9/7/97b0a9d39c660458af16850d5abf2b19f1f36676
-b
-2src/main/java/hr/fer/hmo/squad/SquadGenerator.java,2/f/2f17efdd437df0e6ba348479afa4137d3deaef84
-l
-<src/main/java/hr/fer/hmo/algorithm/LocalSearchAlgorithm.java,7/4/74352eb0120bae05e1ee5356665da4bd769c3056

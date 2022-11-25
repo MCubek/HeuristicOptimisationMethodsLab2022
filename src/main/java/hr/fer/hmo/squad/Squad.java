@@ -81,7 +81,7 @@ public class Squad implements Iterable<Squad> {
         return activePlayers.contains(player) || reservePlayers.contains(player);
     }
 
-    int[] getVectorRepresentation() {
+    public int[] getVectorRepresentation() {
         return vectorRepresentation;
     }
 
