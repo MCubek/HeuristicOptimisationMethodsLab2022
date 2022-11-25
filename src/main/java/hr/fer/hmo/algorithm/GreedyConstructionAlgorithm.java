@@ -25,7 +25,7 @@ public class GreedyConstructionAlgorithm implements ISearchAlgorithm {
     private static final double DOUBLE_ERROR = 1E-5;
 
     public GreedyConstructionAlgorithm(double alpha, double beta, Random random) {
-        this.alpha = alpha;
+        this.alpha = 1 - alpha;
         this.random = random;
 
         this.playerValueFunction = p -> Math.pow(p.getPoints(), beta) / p.getPrice();

@@ -139,7 +139,7 @@ public class Squad implements Iterable<Squad> {
 
     @Override
     public Iterator<Squad> iterator() {
-        return new SquadNeighborhoodSingleIterator(vectorRepresentation, players);
+        return new SquadNeighborhoodIterator(vectorRepresentation, players);
     }
 
     public List<Squad> getNeighboursList() {

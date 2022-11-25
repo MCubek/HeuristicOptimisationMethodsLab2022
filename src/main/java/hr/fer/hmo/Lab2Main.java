@@ -1,9 +1,7 @@
 package hr.fer.hmo;
 
-import hr.fer.hmo.algorithm.GraspSearchAlgorithm;
 import hr.fer.hmo.algorithm.GreedyConstructionAlgorithm;
 import hr.fer.hmo.algorithm.ISearchAlgorithm;
-import hr.fer.hmo.algorithm.LocalSearchAlgorithm;
 import hr.fer.hmo.player.Player;
 import hr.fer.hmo.squad.Squad;
 import hr.fer.hmo.util.LoadUtil;
@@ -13,25 +11,21 @@ import java.nio.file.Path;
 import java.util.List;
 import java.util.Random;
 
-public class Lab1Main {
+public class Lab2Main {
 
     private static final double ALPHA = 0.2;
     private static final double BETA = 1.69;
-    private static final int MAX_ITERATIONS_LOCAL_SEARCH = 10_000;
-    private static final int MAX_ITERATIONS_GRASP = 10;
 
     public static void main(String[] args) {
         if (args.length != 2)
             throw new IllegalArgumentException("Requires path of file and algorithm number as only arguments");
 
         Random random = new Random();
-        ISearchAlgorithm localSearchAlgorithm = new LocalSearchAlgorithm(MAX_ITERATIONS_LOCAL_SEARCH, random);
-        ISearchAlgorithm greedyAlgorithm = new GreedyConstructionAlgorithm(0, BETA, random);
-        ISearchAlgorithm constructionAlgorithm = new GreedyConstructionAlgorithm(ALPHA, BETA, random);
+        ISearchAlgorithm greedyAlgorithm = new GreedyConstructionAlgorithm(ALPHA, BETA, random);
 
         ISearchAlgorithm algorithm = switch (args[1]) {
             case "1" -> greedyAlgorithm;
-            case "2" -> new GraspSearchAlgorithm(localSearchAlgorithm, constructionAlgorithm, MAX_ITERATIONS_GRASP);
+            case "2" -> greedyAlgorithm;
             default -> throw new IllegalStateException("Unexpected algorithm: " + args[1]);
         };
 
