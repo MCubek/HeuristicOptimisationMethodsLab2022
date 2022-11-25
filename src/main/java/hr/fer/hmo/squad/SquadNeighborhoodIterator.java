@@ -31,7 +31,7 @@ public class SquadNeighborhoodIterator implements Iterator<Squad> {
 
     @Override
     public boolean hasNext() {
-        return visitedNumber != 15 || j < vectorRepresentation.length;
+        return visitedNumber < 15;
     }
 
     @Override
@@ -42,7 +42,6 @@ public class SquadNeighborhoodIterator implements Iterator<Squad> {
             while (vectorRepresentation[i] == 0) {
                 i++;
             }
-            visitedNumber++;
             j = 0;
         }
 
@@ -59,6 +58,10 @@ public class SquadNeighborhoodIterator implements Iterator<Squad> {
         newVector[i] = 0;
 
         j++;
+        if (j>=vectorRepresentation.length) {
+            visitedNumber += 1;
+            i += 1;
+        }
         return new Squad(newVector, players);
     }
 }

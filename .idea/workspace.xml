@@ -9,19 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6884bc6e-f481-4646-b889-6ac6b1007b7f" name="Changes" comment="changed greedy alpha">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/SimulatedAnnealingAlgorithm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/tabu/AttributiveTabuList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/tabu/ExplicitTabuList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/tabu/ITabuList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/tabu/TabuSearchAlgorithm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/SquadPlayerChangeElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/util/Pair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+    <list default="true" id="6884bc6e-f481-4646-b889-6ac6b1007b7f" name="Changes" comment="work on algorithm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/Lab2Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/Lab2Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/LocalSearchAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/LocalSearchAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/Squad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/Squad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/SquadNeighborhoodIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/SquadNeighborhoodIterator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +215,7 @@
       <workItem from="1668691582168" duration="6097000" />
       <workItem from="1668708757447" duration="423000" />
       <workItem from="1668709190938" duration="3262000" />
-      <workItem from="1669361788150" duration="7939000" />
+      <workItem from="1669361788150" duration="8980000" />
     </task>
     <task id="LOCAL-00001" summary="init and starting">
       <created>1666649890515</created>
@@ -353,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669362266232</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="work on algorithm">
+      <created>1669377213425</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1669377213425</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,7 +384,8 @@
     <MESSAGE value="improvement on lab1" />
     <MESSAGE value="changed package" />
     <MESSAGE value="changed greedy alpha" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed greedy alpha" />
+    <MESSAGE value="work on algorithm" />
+    <option name="LAST_COMMIT_MESSAGE" value="work on algorithm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -431,6 +429,9 @@
         <watch expression="incumbent.getScore()" language="JAVA" />
         <watch expression="bestNeighbour.getScore()" language="JAVA" />
         <watch expression="change.previousPosition()" />
+        <watch expression="((SquadNeighborhoodIterator)this).i" custom="hr.fer.hmo.squad.SquadNeighborhoodIterator" />
+        <watch expression="((SquadNeighborhoodIterator)this).j" custom="hr.fer.hmo.squad.SquadNeighborhoodIterator" />
+        <watch expression="((SquadNeighborhoodIterator)this).visitedNumber" custom="hr.fer.hmo.squad.SquadNeighborhoodIterator" />
       </configuration>
     </watches-manager>
   </component>
