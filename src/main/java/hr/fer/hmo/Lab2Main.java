@@ -4,7 +4,6 @@ import hr.fer.hmo.algorithm.GreedyConstructionAlgorithm;
 import hr.fer.hmo.algorithm.ISearchAlgorithm;
 import hr.fer.hmo.algorithm.SimulatedAnnealingAlgorithm;
 import hr.fer.hmo.algorithm.tabu.AttributiveTabuList;
-import hr.fer.hmo.algorithm.tabu.ExplicitTabuList;
 import hr.fer.hmo.algorithm.tabu.ITabuList;
 import hr.fer.hmo.algorithm.tabu.TabuSearchAlgorithm;
 import hr.fer.hmo.player.Player;
@@ -22,7 +21,7 @@ public class Lab2Main {
     private static final double BETA = 1.69;
 
     private static final int TABU_TENURE = 10;
-    private static final int MAX_ITER = 1_000;
+    private static final int MAX_ITER = 100;
 
     public static void main(String[] args) {
         if (args.length != 2)

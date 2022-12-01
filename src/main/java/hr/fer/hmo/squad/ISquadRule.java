@@ -9,6 +9,7 @@ import java.util.Set;
  * Created on 24.10.2022.
  */
 
+@FunctionalInterface
 public interface ISquadRule {
     boolean validate(Set<Player> activePlayers, Set<Player> reservePlayers);
 }

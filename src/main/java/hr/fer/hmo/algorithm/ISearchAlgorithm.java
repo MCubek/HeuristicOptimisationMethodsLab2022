@@ -10,6 +10,7 @@ import java.util.List;
  * Created on 25.10.2022.
  */
 
+@FunctionalInterface
 public interface ISearchAlgorithm {
     Squad search(List<Player> players, Squad startingSquad);
 }
