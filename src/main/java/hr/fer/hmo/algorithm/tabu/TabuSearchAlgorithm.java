@@ -59,7 +59,6 @@ public class TabuSearchAlgorithm implements ISearchAlgorithm {
             System.out.printf("Iteration %d, score :%d%n", i, current.getScore());
             if (current.getScore() > incumbent.getScore()) {
                 incumbent = current;
-                System.out.println("New incumbent found!");
             }
         }
         return incumbent;
