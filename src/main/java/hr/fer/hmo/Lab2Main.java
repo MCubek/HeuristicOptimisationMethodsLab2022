@@ -22,7 +22,7 @@ public class Lab2Main {
     private static final double ALPHA = 0.2;
     private static final double BETA = 1.69;
 
-    private static final int MAX_ITER = 100;
+    private static final int MAX_ITER = 50;
 
     /**
      * @param args First argument: Input file
@@ -41,8 +41,8 @@ public class Lab2Main {
         int tabuTenure = Integer.parseInt(args[3]);
 
         ITabuList tabuList = switch (args[4]) {
-            case "1" -> new AttributiveTabuList(tabuTenure);
-            case "2" -> new ExplicitTabuList(tabuTenure);
+            case "1" -> new ExplicitTabuList(tabuTenure);
+            case "2" -> new AttributiveTabuList(tabuTenure);
             default -> throw new IllegalArgumentException("Unexpected tabu list: " + args[4]);
         };
 
@@ -59,8 +59,8 @@ public class Lab2Main {
             List<Player> players = LoadUtil.loadPlayers(file);
 
             Squad startingSquad = switch (args[2]) {
-                case "1" -> SquadGenerator.generateRandomValidSquad(players, random, 11, 4);
-                case "2" -> greedyAlgorithm.search(players, null);
+                case "1" -> greedyAlgorithm.search(players, null);
+                case "2" -> SquadGenerator.generateRandomValidSquad(players, random, 11, 4);
                 default -> throw new IllegalArgumentException("Unexpected starting squad algorithm: " + args[2]);
             };
 

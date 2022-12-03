@@ -56,7 +56,7 @@ public class TabuSearchAlgorithm implements ISearchAlgorithm {
             tabuList.addEntry(current, bestNeighbour);
             current = bestNeighbour;
 
-            System.out.printf("Iteration %d, score :%d%n", i, current.getScore());
+            System.out.printf("Iteration: %d, score: %d%n", i, current.getScore());
             if (current.getScore() > incumbent.getScore()) {
                 incumbent = current;
             }

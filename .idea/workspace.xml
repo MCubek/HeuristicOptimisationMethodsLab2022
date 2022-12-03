@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6884bc6e-f481-4646-b889-6ac6b1007b7f" name="Changes" comment="refactoring">
+    <list default="true" id="6884bc6e-f481-4646-b889-6ac6b1007b7f" name="Changes" comment="updates for testing">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/Lab2Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/Lab2Main.java" afterDir="false" />
@@ -36,6 +36,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="Jenkins.Settings">
+    <option name="jenkinsVersion" value="VERSION_2" />
+    <option name="lastSelectedView" value="Global" />
+    <option name="username" value="mcubek" />
+  </component>
   <component name="KubernetesApiPersistence">
     <option name="context" value="neosdev" />
   </component>
@@ -54,26 +59,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/matejc/Dev/IntelliJ/Heurističke metode optimizacije/Lab1_HMO/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/matejc/Dev/IntelliJ/Heurističke metode optimizacije/Lab1_HMO/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="hr.fer.hmo.lab1.player" />
@@ -93,7 +98,7 @@
       <recent name="hr.fer.hmo.lab1.squad" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Instance3 Tabu">
+  <component name="RunManager" selected="Application.Instance1 Tabu">
     <configuration name="Instance1 GRASP" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.Lab1Main" />
       <module name="Lab1_HMO" />
@@ -125,7 +130,7 @@
     <configuration name="Instance1 Tabu" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.Lab2Main" />
       <module name="Lab1_HMO" />
-      <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance1.csv 1 2 10 2" />
+      <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance1.csv 1 2 5 1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="hr.fer.hmo.lab1.squad.*" />
@@ -263,7 +268,14 @@
       <workItem from="1669832282181" duration="78000" />
       <workItem from="1669832369209" duration="904000" />
       <workItem from="1669885819505" duration="1171000" />
-      <workItem from="1669925630704" duration="1460000" />
+      <workItem from="1669925630704" duration="1728000" />
+      <workItem from="1669927376583" duration="128000" />
+      <workItem from="1669927512006" duration="29000" />
+      <workItem from="1669927547619" duration="371000" />
+      <workItem from="1669927927974" duration="1696000" />
+      <workItem from="1669956944438" duration="3151000" />
+      <workItem from="1670073868777" duration="1648000" />
+      <workItem from="1670082093710" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="init and starting">
       <created>1666649890515</created>
@@ -405,7 +417,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669925746005</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="updates for testing">
+      <created>1669927262314</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1669927262314</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +460,8 @@
     <MESSAGE value="changed greedy alpha" />
     <MESSAGE value="work on algorithm" />
     <MESSAGE value="refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
+    <MESSAGE value="updates for testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates for testing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -477,6 +497,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/tabu/AttributiveTabuList.java</url>
           <line>64</line>
           <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/Lab2Main.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="80" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
