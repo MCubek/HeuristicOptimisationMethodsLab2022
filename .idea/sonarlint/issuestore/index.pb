@@ -32,12 +32,6 @@ h
 +src/main/java/hr/fer/hmo/util/LoadUtil.java,3/c/3c46c5abd863b6421bf5d51853973dc3ea3db887
 V
 &src/main/java/hr/fer/hmo/Lab1Main.java,7/f/7f28adf0680b284199ea5d69ff72bd70a5b7fa0b
-m
-=src/main/java/hr/fer/hmo/algorithm/tabu/ExplicitTabuList.java,6/5/6538d2ca44a04fc01bed711ecf84cf7f346af0bc
-p
-@src/main/java/hr/fer/hmo/algorithm/tabu/AttributiveTabuList.java,8/0/80dcd0261fab0c15612c5ef05ee04bcc3790f346
-p
-@src/main/java/hr/fer/hmo/algorithm/tabu/TabuSearchAlgorithm.java,a/3/a38de0d13495fd6a43f7c7ffe0939f78e5c61a3d
 l
 <src/main/java/hr/fer/hmo/algorithm/GraspSearchAlgorithm.java,e/9/e9c0f82b7ed3a4d6e02079d1ff424d3e28925d9e
 ^

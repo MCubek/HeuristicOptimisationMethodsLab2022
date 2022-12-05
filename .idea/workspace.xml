@@ -9,10 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6884bc6e-f481-4646-b889-6ac6b1007b7f" name="Changes" comment="output printing temperature">
+    <list default="true" id="6884bc6e-f481-4646-b889-6ac6b1007b7f" name="Changes" comment="updates to constants">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/Lab2Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/Lab2Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/annaeling/SimulatedAnnealingAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/annaeling/SimulatedAnnealingAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/tabu/TabuSearchAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/tabu/TabuSearchAlgorithm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +108,7 @@
       <recent name="hr.fer.hmo.lab1.squad" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Instance1 Annealing">
+  <component name="RunManager" selected="Application.Instance1 Tabu">
     <configuration name="Instance1 Annealing" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.Lab2Main" />
       <module name="Lab1_HMO" />
@@ -305,7 +307,7 @@
       <workItem from="1670176849919" duration="1042000" />
       <workItem from="1670224917035" duration="7955000" />
       <workItem from="1670240031275" duration="1366000" />
-      <workItem from="1670256462522" duration="2524000" />
+      <workItem from="1670256462522" duration="8210000" />
     </task>
     <task id="LOCAL-00001" summary="init and starting">
       <created>1666649890515</created>
@@ -475,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670243790944</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="updates to constants">
+      <created>1670262752264</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1670262752264</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,7 +524,8 @@
     <MESSAGE value="updates for string output" />
     <MESSAGE value="simulated annaeling added" />
     <MESSAGE value="output printing temperature" />
-    <option name="LAST_COMMIT_MESSAGE" value="output printing temperature" />
+    <MESSAGE value="updates to constants" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates to constants" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -538,7 +548,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/tabu/TabuSearchAlgorithm.java</url>
-          <line>63</line>
+          <line>66</line>
           <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -554,7 +564,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="NONE" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/annaeling/SimulatedAnnealingAlgorithm.java</url>
-          <line>38</line>
+          <line>40</line>
           <log-expression expression="temperature" language="JAVA" />
           <option name="timeStamp" value="85" />
         </line-breakpoint>

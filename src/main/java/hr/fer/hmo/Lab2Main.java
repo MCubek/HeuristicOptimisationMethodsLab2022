@@ -22,14 +22,14 @@ import java.util.Random;
 
 public class Lab2Main {
 
-    private static final double GREEDY_ALPHA = 0.0;
+    private static final double GREEDY_ALPHA = 0.1;
     private static final double GREEDY_BETA = 1.69;
 
-    private static final int TABU_MAX_ITER = 200;
+    private static final int TABU_MAX_ITER = 100;
 
-    private static final double SIMULATED_ANNEALING_GEOMETRIC_ALPHA = 0.85;
-    private static final double SIMULATED_ANNEALING_LINEAR_BETA = 5;
-    private static final int SIMULATED_ANNEALING_ITER_INNER = 50;
+    private static final double SIMULATED_ANNEALING_GEOMETRIC_ALPHA = 0.95;
+    private static final double SIMULATED_ANNEALING_LINEAR_BETA = 2;
+    private static final int SIMULATED_ANNEALING_ITER_INNER = 75;
     private static final double SIMULATED_ANNEALING_MIN_TEMPERATURE = 1E-5;
 
 

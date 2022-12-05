@@ -32,22 +32,25 @@ public class TabuSearchAlgorithm implements ISearchAlgorithm {
         if (startingSquad == null)
             startingSquad = SquadGenerator.generateRandomValidSquad(players, new Random(), 11, 4);
 
+        System.out.printf("Iteration: 0, score: %d%n", startingSquad.getScore());
+
         Squad incumbent = startingSquad;
         Squad current = startingSquad;
 
-        for (int i = 0; i < maxIterations; i++) {
+        for (int i = 1; i < maxIterations; i++) {
             Squad bestNeighbour = null;
             for (var neighbour : current) {
                 // Starting clause
                 if (bestNeighbour == null) {
-                    if (neighbour.checkRule(rule) && tabuList.isAllowed(neighbour))
+                    if (neighbour.checkRule(rule) && tabuList.isAllowed(neighbour)) {
                         bestNeighbour = neighbour;
+                    }
                     continue;
                 }
 
                 if (neighbour.getScore() > bestNeighbour.getScore()
                     && neighbour.checkRule(rule)
-                    && tabuList.isAllowed(neighbour)) {
+                    && (tabuList.isAllowed(neighbour) || neighbour.getScore() > incumbent.getScore())) {
                     bestNeighbour = neighbour;
                 }
             }

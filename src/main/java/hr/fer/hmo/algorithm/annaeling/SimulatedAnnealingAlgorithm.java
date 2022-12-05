@@ -30,12 +30,14 @@ public class SimulatedAnnealingAlgorithm implements ISearchAlgorithm {
     @Override
     public Squad search(List<Player> players, Squad startingSquad) {
         Squad current = Objects.requireNonNull(startingSquad);
+        Squad best = current;
+        System.out.printf("Iteration: 0, score: %d%n", current.getScore());
 
         temperatureStrategy.initialiseCurrentTemperature();
 
         double temperature = Double.MAX_VALUE;
 
-        for (int i = 0; temperature > temperatureStrategy.minTemperature(); i++) {
+        for (int i = 1; temperature > temperatureStrategy.minTemperature() + 1; i++) {
             temperature = temperatureStrategy.getAndUpdateTemperature();
             System.out.printf("Temperature: %.4f%n", temperature);
 
@@ -44,11 +46,13 @@ public class SimulatedAnnealingAlgorithm implements ISearchAlgorithm {
                 Squad neighbour = getRandomValidNeighbour(current);
 
                 current = shouldSwitchWithNeighbour(current, neighbour, temperature) ? neighbour : current;
+
+                if (current.getScore() > best.getScore())
+                    best = current;
             }
             System.out.printf("Iteration: %d, score: %d%n", i, current.getScore());
-            System.gc();
         }
-        return current;
+        return best;
     }
 
     private boolean shouldSwitchWithNeighbour(Squad current, Squad neighbour, double temperature) {
