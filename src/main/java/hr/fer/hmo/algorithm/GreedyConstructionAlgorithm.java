@@ -42,7 +42,7 @@ public class GreedyConstructionAlgorithm implements ISearchAlgorithm {
 
         Squad generatedSquad;
         do {
-            generatedSquad = new Squad(11, 4, players);
+            generatedSquad = new Squad(players);
             // MANDATORY PLAYERS
 
             // 1 Goalkeeper for active team

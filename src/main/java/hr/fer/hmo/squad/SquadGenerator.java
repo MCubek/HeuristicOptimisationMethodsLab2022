@@ -20,7 +20,7 @@ public class SquadGenerator {
     public static Squad generateRandomValidSquad(List<Player> players, Random random, int activePlayersCount, int reservePlayersCount) {
         Squad squad;
         do {
-            squad = new Squad(activePlayersCount, reservePlayersCount, players);
+            squad = new Squad(players);
 
             var pickedPlayers = random.ints(0, players.size() - 1)
                     .distinct()

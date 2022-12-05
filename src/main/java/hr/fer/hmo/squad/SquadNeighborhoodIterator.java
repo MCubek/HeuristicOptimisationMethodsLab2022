@@ -50,6 +50,8 @@ public class SquadNeighborhoodIterator implements Iterator<Squad> {
                 j++;
             }
         } catch (IndexOutOfBoundsException e) {
+            visitedNumber += 1;
+            i += 1;
             return new Squad(vectorRepresentation, players);
         }
 

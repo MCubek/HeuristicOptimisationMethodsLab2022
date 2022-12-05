@@ -2,7 +2,7 @@ package hr.fer.hmo.squad;
 
 import hr.fer.hmo.player.Player;
 
-import java.util.Set;
+import java.util.Collection;
 
 /**
  * @author matejc
@@ -11,5 +11,5 @@ import java.util.Set;
 
 @FunctionalInterface
 public interface ISquadRule {
-    boolean validate(Set<Player> activePlayers, Set<Player> reservePlayers);
+    boolean validate(Collection<Player> activePlayers, Collection<Player> reservePlayers);
 }

@@ -18,25 +18,21 @@ D
 +src/main/java/hr/fer/hmo/player/Player.java,4/f/4f36310a40523b9ce11a8df2248e4988cf2f2156
 c
 3src/main/java/hr/fer/hmo/player/PlayerPosition.java,9/7/97b0a9d39c660458af16850d5abf2b19f1f36676
-^
-.src/main/java/hr/fer/hmo/squad/SquadRules.java,3/6/369660d2fe05c1f125b9d8f76c70de2bba2f8f7a
-b
-2src/main/java/hr/fer/hmo/squad/SquadGenerator.java,2/f/2f17efdd437df0e6ba348479afa4137d3deaef84
-Y
-)src/main/java/hr/fer/hmo/squad/Squad.java,9/4/9481ff5077aaf421967bc157915d66f653a19055
-m
-=src/main/java/hr/fer/hmo/squad/SquadNeighborhoodIterator.java,6/a/6a21efa75061aef2222b9bea71b37cc95c2cfd0a
 <
 3-greedy.txt,c/d/cd5767b22150eb1ad40aafae05076f6191635bf5
 ;
 3-grasp.txt,c/8/c8a183344e344f41c4d03043a93cb369e957426d
 h
 8src/main/java/hr/fer/hmo/algorithm/ISearchAlgorithm.java,1/e/1e7aef4356dd59945f409bbc24fe65e0db63f0a1
-^
-.src/main/java/hr/fer/hmo/squad/ISquadRule.java,3/e/3e1dc26d22a3275e06833c6a0011b77d67f48275
 ;
 1-grasp.txt,8/1/81eddb648c3fa393da4faf696001cf44c345d0fc
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
-s
-Csrc/main/java/hr/fer/hmo/algorithm/GreedyConstructionAlgorithm.java,3/0/30c6030d72c8732bce1f2b6fa4a656570b99f99a
+[
++src/main/java/hr/fer/hmo/util/LoadUtil.java,3/c/3c46c5abd863b6421bf5d51853973dc3ea3db887
+V
+&src/main/java/hr/fer/hmo/Lab1Main.java,7/f/7f28adf0680b284199ea5d69ff72bd70a5b7fa0b
+m
+=src/main/java/hr/fer/hmo/algorithm/tabu/ExplicitTabuList.java,6/5/6538d2ca44a04fc01bed711ecf84cf7f346af0bc
+p
+@src/main/java/hr/fer/hmo/algorithm/tabu/AttributiveTabuList.java,8/0/80dcd0261fab0c15612c5ef05ee04bcc3790f346

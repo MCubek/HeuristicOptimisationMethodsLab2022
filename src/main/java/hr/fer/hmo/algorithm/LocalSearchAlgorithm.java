@@ -30,10 +30,8 @@ public record LocalSearchAlgorithm(int MAX_ITERATIONS, Random random) implements
 
             var squadScore = squad.getScore();
 
-            List<Squad> betterNeighbours = squad.getNeighboursList()
-                    .parallelStream()
-                    .filter(neighbour -> neighbour.getScore() > squadScore && neighbour.checkRule(rule))
-                    .toList();
+            List<Squad> betterNeighbours = squad.getNeighboursListWithPredicate(
+                    neighbour -> neighbour.getScore() > squadScore && neighbour.checkRule(rule));
 
             if (betterNeighbours.isEmpty()) break;
 

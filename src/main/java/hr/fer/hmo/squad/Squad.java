@@ -3,6 +3,7 @@ package hr.fer.hmo.squad;
 import hr.fer.hmo.player.Player;
 
 import java.util.*;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -12,20 +13,17 @@ import java.util.stream.Stream;
  */
 
 public class Squad implements Iterable<Squad> {
-    private final Set<Player> activePlayers;
-    private final Set<Player> reservePlayers;
-    private final int activePlayersCount;
-    private final int reservePlayersCount;
+    private final Collection<Player> activePlayers;
+    private final Collection<Player> reservePlayers;
+
     private final List<Player> players;
 
     private final int[] vectorRepresentation;
 
-    public Squad(int activePlayers, int reservePlayers, List<Player> players) {
+    public Squad(List<Player> players) {
         this.players = players;
-        this.activePlayers = new HashSet<>(activePlayers);
-        this.reservePlayers = new HashSet<>(reservePlayers);
-        this.activePlayersCount = activePlayers;
-        this.reservePlayersCount = reservePlayers;
+        this.activePlayers = new LinkedList<>();
+        this.reservePlayers = new LinkedList<>();
 
         this.vectorRepresentation = new int[players.size()];
     }
@@ -34,14 +32,12 @@ public class Squad implements Iterable<Squad> {
         this.players = players;
         this.activePlayers = getActivePlayersFromVector(vectorRepresentation);
         this.reservePlayers = getReservePlayersFromVector(vectorRepresentation);
-        this.activePlayersCount = activePlayers.size();
-        this.reservePlayersCount = reservePlayers.size();
 
         this.vectorRepresentation = vectorRepresentation;
     }
 
-    private Set<Player> getActivePlayersFromVector(int[] vectorRepresentation) {
-        Set<Player> activePlayersSet = new HashSet<>();
+    private Collection<Player> getActivePlayersFromVector(int[] vectorRepresentation) {
+        Collection<Player> activePlayersSet = new LinkedList<>();
 
         for (int i = 0; i < vectorRepresentation.length; i++) {
             if (vectorRepresentation[i] == 1) {
@@ -51,8 +47,8 @@ public class Squad implements Iterable<Squad> {
         return activePlayersSet;
     }
 
-    private Set<Player> getReservePlayersFromVector(int[] vectorRepresentation) {
-        Set<Player> reservePlayersSet = new HashSet<>();
+    private Collection<Player> getReservePlayersFromVector(int[] vectorRepresentation) {
+        Collection<Player> reservePlayersSet = new LinkedList<>();
 
         for (int i = 0; i < vectorRepresentation.length; i++) {
             if (vectorRepresentation[i] == 2) {
@@ -63,18 +59,13 @@ public class Squad implements Iterable<Squad> {
     }
 
     public void addActivePlayer(Player player) {
-        if (activePlayers.size() < activePlayersCount) {
-            this.vectorRepresentation[player.getId() - 1] = 1;
-            activePlayers.add(player);
-        }
-
+        this.vectorRepresentation[player.getId() - 1] = 1;
+        activePlayers.add(player);
     }
 
     public void addReservePlayer(Player player) {
-        if (reservePlayers.size() < reservePlayersCount) {
-            this.vectorRepresentation[player.getId() - 1] = 2;
-            reservePlayers.add(player);
-        }
+        this.vectorRepresentation[player.getId() - 1] = 2;
+        reservePlayers.add(player);
     }
 
     public boolean isPlayerInSquad(Player player) {
@@ -142,12 +133,12 @@ public class Squad implements Iterable<Squad> {
         return new SquadNeighborhoodIterator(vectorRepresentation, players);
     }
 
-    public List<Squad> getNeighboursList() {
+    public List<Squad> getNeighboursListWithPredicate(Predicate<Squad> predicate) {
         List<Squad> list = new ArrayList<>();
         for (var neighbour : this) {
-            list.add(neighbour);
+            if (predicate.test(neighbour))
+                list.add(neighbour);
         }
         return list;
     }
-
 }

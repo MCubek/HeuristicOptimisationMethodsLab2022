@@ -9,11 +9,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6884bc6e-f481-4646-b889-6ac6b1007b7f" name="Changes" comment="updates for testing">
+    <list default="true" id="6884bc6e-f481-4646-b889-6ac6b1007b7f" name="Changes" comment="updates for string output">
+      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/annaeling/GeometricTemperatureStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/annaeling/ITemperatureStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/annaeling/LinearTemperatureStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/Lab2Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/Lab2Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/tabu/TabuSearchAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/tabu/TabuSearchAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/GreedyConstructionAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/GreedyConstructionAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/LocalSearchAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/LocalSearchAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/SimulatedAnnealingAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/annaeling/SimulatedAnnealingAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/ISquadRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/ISquadRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/Squad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/Squad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/SquadGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/SquadGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/SquadNeighborhoodIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/SquadNeighborhoodIterator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +36,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Record" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Record" />
       </list>
     </option>
   </component>
@@ -37,6 +46,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="Jenkins.Settings">
+    <option name="favoriteJobs">
+      <list>
+        <favorite name="NEOS/CLOUDVANE-DATACOLLECTOR-KAFKA" url="https://jenkins.neos.hr/job/NEOS/job/CLOUDVANE-DATACOLLECTOR-KAFKA/" />
+        <favorite name="NEOS/CLOUDVANE-DATACOLLECTOR-KAFKA/develop" url="https://jenkins.neos.hr/job/NEOS/job/CLOUDVANE-DATACOLLECTOR-KAFKA/job/develop/" />
+      </list>
+    </option>
     <option name="jenkinsVersion" value="VERSION_2" />
     <option name="lastSelectedView" value="Global" />
     <option name="username" value="mcubek" />
@@ -71,7 +86,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
@@ -98,7 +113,21 @@
       <recent name="hr.fer.hmo.lab1.squad" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Instance1 Tabu">
+  <component name="RunManager" selected="Application.Instance1 Annealing">
+    <configuration name="Instance1 Annealing" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.Lab2Main" />
+      <module name="Lab1_HMO" />
+      <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance1.csv 2 2 1000 2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hr.fer.hmo.lab1.squad.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Instance1 GRASP" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.Lab1Main" />
       <module name="Lab1_HMO" />
@@ -228,6 +257,7 @@
     <list>
       <item itemvalue="Application.Instance1 GRASP" />
       <item itemvalue="Application.Instance1 Tabu" />
+      <item itemvalue="Application.Instance1 Annealing" />
       <item itemvalue="Application.Instance2 Tabu" />
       <item itemvalue="Application.Instance3 Tabu" />
       <item itemvalue="Application.Instance2 Greedy" />
@@ -276,6 +306,11 @@
       <workItem from="1669956944438" duration="3151000" />
       <workItem from="1670073868777" duration="1648000" />
       <workItem from="1670082093710" duration="3000" />
+      <workItem from="1670084197676" duration="1350000" />
+      <workItem from="1670090774345" duration="492000" />
+      <workItem from="1670091493002" duration="3000" />
+      <workItem from="1670176849919" duration="1042000" />
+      <workItem from="1670224917035" duration="7747000" />
     </task>
     <task id="LOCAL-00001" summary="init and starting">
       <created>1666649890515</created>
@@ -424,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669927262314</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="updates for string output">
+      <created>1670087892290</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1670087892290</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,7 +503,8 @@
     <MESSAGE value="work on algorithm" />
     <MESSAGE value="refactoring" />
     <MESSAGE value="updates for testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates for testing" />
+    <MESSAGE value="updates for string output" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates for string output" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -474,7 +517,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/LocalSearchAlgorithm.java</url>
-          <line>37</line>
+          <line>35</line>
           <option name="timeStamp" value="61" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -498,10 +541,16 @@
           <line>64</line>
           <option name="timeStamp" value="79" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="NONE" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/annaeling/SimulatedAnnealingAlgorithm.java</url>
+          <line>38</line>
+          <log-expression expression="temperature" language="JAVA" />
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/Lab2Main.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="80" />
+          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/SquadNeighborhoodIterator.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="87" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -519,5 +568,10 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Lab1_HMO$Instance1_Annealing.ic" NAME="Instance1 Annealing Coverage Results" MODIFIED="1670236596411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>hr.fer.hmo.lab1.squad.*</FILTER>
+    </SUITE>
   </component>
 </project>
