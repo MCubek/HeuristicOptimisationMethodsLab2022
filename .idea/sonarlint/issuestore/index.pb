@@ -36,3 +36,13 @@ m
 =src/main/java/hr/fer/hmo/algorithm/tabu/ExplicitTabuList.java,6/5/6538d2ca44a04fc01bed711ecf84cf7f346af0bc
 p
 @src/main/java/hr/fer/hmo/algorithm/tabu/AttributiveTabuList.java,8/0/80dcd0261fab0c15612c5ef05ee04bcc3790f346
+p
+@src/main/java/hr/fer/hmo/algorithm/tabu/TabuSearchAlgorithm.java,a/3/a38de0d13495fd6a43f7c7ffe0939f78e5c61a3d
+l
+<src/main/java/hr/fer/hmo/algorithm/GraspSearchAlgorithm.java,e/9/e9c0f82b7ed3a4d6e02079d1ff424d3e28925d9e
+^
+.src/main/java/hr/fer/hmo/squad/ISquadRule.java,3/e/3e1dc26d22a3275e06833c6a0011b77d67f48275
+v
+Fsrc/main/java/hr/fer/hmo/algorithm/annaeling/ITemperatureStrategy.java,6/4/64512c3c64caf6ba48648a6cd0161d59c1fd7740
+{
+Ksrc/main/java/hr/fer/hmo/algorithm/annaeling/LinearTemperatureStrategy.java,a/9/a9bfe4f9b059d6e299169d7130806382a1e7a075

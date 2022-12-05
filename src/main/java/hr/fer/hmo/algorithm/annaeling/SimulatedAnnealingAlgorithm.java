@@ -37,6 +37,7 @@ public class SimulatedAnnealingAlgorithm implements ISearchAlgorithm {
 
         for (int i = 0; temperature > temperatureStrategy.minTemperature(); i++) {
             temperature = temperatureStrategy.getAndUpdateTemperature();
+            System.out.printf("Temperature: %.4f%n", temperature);
 
             for (int j = 0; j < temperatureStrategy.innerLoopCount(); j++) {
 

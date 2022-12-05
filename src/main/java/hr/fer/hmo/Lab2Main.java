@@ -30,7 +30,7 @@ public class Lab2Main {
     private static final double SIMULATED_ANNEALING_GEOMETRIC_ALPHA = 0.95;
     private static final double SIMULATED_ANNEALING_LINEAR_BETA = 2;
     private static final int SIMULATED_ANNEALING_ITER_INNER = 100;
-    private static final double SIMULATED_ANNEALING_MIN_TEMPERATURE = 1E-6;
+    private static final double SIMULATED_ANNEALING_MIN_TEMPERATURE = 1E-5;
 
 
     /**

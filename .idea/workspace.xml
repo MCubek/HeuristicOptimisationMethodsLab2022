@@ -9,20 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6884bc6e-f481-4646-b889-6ac6b1007b7f" name="Changes" comment="updates for string output">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/annaeling/GeometricTemperatureStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/annaeling/ITemperatureStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/annaeling/LinearTemperatureStrategy.java" afterDir="false" />
+    <list default="true" id="6884bc6e-f481-4646-b889-6ac6b1007b7f" name="Changes" comment="simulated annaeling added">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/Lab2Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/Lab2Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/GreedyConstructionAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/GreedyConstructionAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/LocalSearchAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/LocalSearchAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/SimulatedAnnealingAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/annaeling/SimulatedAnnealingAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/ISquadRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/ISquadRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/Squad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/Squad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/SquadGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/SquadGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/SquadNeighborhoodIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/SquadNeighborhoodIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/annaeling/SimulatedAnnealingAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/annaeling/SimulatedAnnealingAlgorithm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +108,7 @@
     <configuration name="Instance1 Annealing" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.Lab2Main" />
       <module name="Lab1_HMO" />
-      <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance1.csv 2 2 1000 2" />
+      <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance1.csv 2 2 200 2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="hr.fer.hmo.lab1.squad.*" />
@@ -310,7 +301,8 @@
       <workItem from="1670090774345" duration="492000" />
       <workItem from="1670091493002" duration="3000" />
       <workItem from="1670176849919" duration="1042000" />
-      <workItem from="1670224917035" duration="7747000" />
+      <workItem from="1670224917035" duration="7955000" />
+      <workItem from="1670240031275" duration="1319000" />
     </task>
     <task id="LOCAL-00001" summary="init and starting">
       <created>1666649890515</created>
@@ -466,7 +458,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670087892290</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="simulated annaeling added">
+      <created>1670237546307</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1670237546307</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -504,7 +503,8 @@
     <MESSAGE value="refactoring" />
     <MESSAGE value="updates for testing" />
     <MESSAGE value="updates for string output" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates for string output" />
+    <MESSAGE value="simulated annaeling added" />
+    <option name="LAST_COMMIT_MESSAGE" value="simulated annaeling added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -546,11 +546,6 @@
           <line>38</line>
           <log-expression expression="temperature" language="JAVA" />
           <option name="timeStamp" value="85" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/squad/SquadNeighborhoodIterator.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="87" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
