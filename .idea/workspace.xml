@@ -9,12 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6884bc6e-f481-4646-b889-6ac6b1007b7f" name="Changes" comment="updates to constants">
+    <list default="true" id="6884bc6e-f481-4646-b889-6ac6b1007b7f" name="Changes" comment="updates">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/lab2/Lab2_inst1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/lab2/Lab2_inst2.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/Lab2Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/Lab2Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/annaeling/SimulatedAnnealingAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/annaeling/SimulatedAnnealingAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/tabu/TabuSearchAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/tabu/TabuSearchAlgorithm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,36 +69,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/matejc/Dev/IntelliJ/Heurističke metode optimizacije/Lab1_HMO/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/matejc/Dev/IntelliJ/Heurističke metode optimizacije/Lab1_HMO",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="hr.fer.hmo.lab1.player" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="hr.fer.hmo.lab1.util.LoadUtil" />
       <recent name="hr.fer.hmo.lab1.squad.SquadGenerator" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/lab2" />
     </key>
     <key name="MoveInnerDialog.RECENTS_KEY">
       <recent name="hr.fer.hmo.lab1.squad" />
@@ -112,7 +116,7 @@
     <configuration name="Instance1 Annealing" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.Lab2Main" />
       <module name="Lab1_HMO" />
-      <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance1.csv 2 2 200 2" />
+      <option name="PROGRAM_PARAMETERS" value="src/main/resources/lab2/Lab2_inst1.csv 2 2 200 2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="hr.fer.hmo.lab1.squad.*" />
@@ -123,7 +127,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Instance1 GRASP" type="Application" factoryName="Application">
+    <configuration name="Instance1 GRASP" type="Application" factoryName="Application" folderName="Lab1">
       <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.Lab1Main" />
       <module name="Lab1_HMO" />
       <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance1.csv 2" />
@@ -137,7 +141,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Instance1 Greedy" type="Application" factoryName="Application" temporary="true">
+    <configuration name="Instance1 Greedy" type="Application" factoryName="Application" folderName="Lab1" temporary="true">
       <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.Lab1Main" />
       <module name="Lab1_HMO" />
       <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance1.csv 1" />
@@ -154,7 +158,7 @@
     <configuration name="Instance1 Tabu" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.Lab2Main" />
       <module name="Lab1_HMO" />
-      <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance1.csv 1 2 5 1" />
+      <option name="PROGRAM_PARAMETERS" value="src/main/resources/lab2/Lab2_inst1.csv 1 1 200 1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="hr.fer.hmo.lab1.squad.*" />
@@ -165,7 +169,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Instance2 GRASP" type="Application" factoryName="Application">
+    <configuration name="Instance2 Annealing" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.Lab2Main" />
+      <module name="Lab1_HMO" />
+      <option name="PROGRAM_PARAMETERS" value="src/main/resources/lab2/Lab2_inst2.csv 2 2 200 2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hr.fer.hmo.lab1.squad.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Instance2 GRASP" type="Application" factoryName="Application" folderName="Lab1">
       <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.Lab1Main" />
       <module name="Lab1_HMO" />
       <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance2.csv 2" />
@@ -179,7 +197,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Instance2 Greedy" type="Application" factoryName="Application">
+    <configuration name="Instance2 Greedy" type="Application" factoryName="Application" folderName="Lab1">
       <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.Lab1Main" />
       <module name="Lab1_HMO" />
       <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance2.csv 1" />
@@ -196,7 +214,7 @@
     <configuration name="Instance2 Tabu" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.Lab2Main" />
       <module name="Lab1_HMO" />
-      <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance2.csv 1 2 10 2" />
+      <option name="PROGRAM_PARAMETERS" value="src/main/resources/lab2/Lab2_inst2.csv 1 2 10 2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="hr.fer.hmo.lab1.squad.*" />
@@ -207,7 +225,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Instance3 GRASP" type="Application" factoryName="Application">
+    <configuration name="Instance3 GRASP" type="Application" factoryName="Application" folderName="Lab1">
       <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.Lab1Main" />
       <module name="Lab1_HMO" />
       <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance3.csv 2" />
@@ -221,7 +239,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Instance3 Greedy" type="Application" factoryName="Application">
+    <configuration name="Instance3 Greedy" type="Application" factoryName="Application" folderName="Lab1">
       <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.Lab1Main" />
       <module name="Lab1_HMO" />
       <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance3.csv 1" />
@@ -235,31 +253,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Instance3 Tabu" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="hr.fer.hmo.Lab2Main" />
-      <module name="Lab1_HMO" />
-      <option name="PROGRAM_PARAMETERS" value="src/main/resources/2022_instance3.csv 1 2 10 2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hr.fer.hmo.lab1.squad.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="Application.Instance3 GRASP" />
+      <item itemvalue="Application.Instance3 Greedy" />
       <item itemvalue="Application.Instance1 GRASP" />
-      <item itemvalue="Application.Instance1 Tabu" />
-      <item itemvalue="Application.Instance1 Annealing" />
-      <item itemvalue="Application.Instance2 Tabu" />
-      <item itemvalue="Application.Instance3 Tabu" />
       <item itemvalue="Application.Instance2 Greedy" />
       <item itemvalue="Application.Instance2 GRASP" />
-      <item itemvalue="Application.Instance3 Greedy" />
-      <item itemvalue="Application.Instance3 GRASP" />
       <item itemvalue="Application.Instance1 Greedy" />
+      <item itemvalue="Application.Instance1 Tabu" />
+      <item itemvalue="Application.Instance1 Annealing" />
+      <item itemvalue="Application.Instance2 Annealing" />
+      <item itemvalue="Application.Instance2 Tabu" />
     </list>
     <recent_temporary>
       <list>
@@ -307,7 +311,11 @@
       <workItem from="1670176849919" duration="1042000" />
       <workItem from="1670224917035" duration="7955000" />
       <workItem from="1670240031275" duration="1366000" />
-      <workItem from="1670256462522" duration="8210000" />
+      <workItem from="1670256462522" duration="9430000" />
+      <workItem from="1670349278972" duration="3799000" />
+      <workItem from="1670418083931" duration="25000" />
+      <workItem from="1671795770142" duration="1378000" />
+      <workItem from="1671797333723" duration="1579000" />
     </task>
     <task id="LOCAL-00001" summary="init and starting">
       <created>1666649890515</created>
@@ -484,11 +492,29 @@
       <option name="project" value="LOCAL" />
       <updated>1670262752264</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="updates">
+      <created>1670279355425</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1670279355425</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -525,7 +551,8 @@
     <MESSAGE value="simulated annaeling added" />
     <MESSAGE value="output printing temperature" />
     <MESSAGE value="updates to constants" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates to constants" />
+    <MESSAGE value="updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -568,8 +595,23 @@
           <log-expression expression="temperature" language="JAVA" />
           <option name="timeStamp" value="85" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/GreedyConstructionAlgorithm.java</url>
+          <line>156</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/hr/fer/hmo/algorithm/GreedyConstructionAlgorithm.java</url>
+          <line>154</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="hr.fer.hmo.player.Player" memberName="price" />
+      </pinned-members>
+    </pin-to-top-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="incumbent.getScore()" language="JAVA" />

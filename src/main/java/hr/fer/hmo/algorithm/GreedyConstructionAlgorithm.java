@@ -34,8 +34,8 @@ public class GreedyConstructionAlgorithm implements ISearchAlgorithm {
     private final Function<Player, Double> playerValueFunction;
     private final Function<Player, Double> playerInversePriceFunction = p -> 1 / p.getPrice();
 
-    private final BiPredicate<Squad, Player> playerValidInSquadRule = (s, p) -> ! s.isPlayerInSquad(p)
-                                                                                && s.clubCounts().getOrDefault(p.getClub(), 0L) <= 2;
+    private final BiPredicate<Squad, Player> playerValidInSquadRule = (s, p) -> !s.isPlayerInSquad(p)
+            && s.clubCounts().getOrDefault(p.getClub(), 0L) <= 2;
 
     @Override
     public Squad search(List<Player> players, Squad startingSquad) {
@@ -93,7 +93,7 @@ public class GreedyConstructionAlgorithm implements ISearchAlgorithm {
                     PlayerPosition.FORWARD,
                     PlayerPosition.FORWARD));
 
-            while (! restOfSquadPrimaryOrReserveId.isEmpty()) {
+            while (!restOfSquadPrimaryOrReserveId.isEmpty()) {
                 int idIndex = random.nextInt(restOfSquadPrimaryOrReserveId.size());
                 int positionIndex = random.nextInt(restOfSquadPosition.size());
 
@@ -117,7 +117,7 @@ public class GreedyConstructionAlgorithm implements ISearchAlgorithm {
             }
 
 
-        } while (! generatedSquad.checkRule(SquadRules.allRules));
+        } while (!generatedSquad.checkRule(SquadRules.allRules));
 
         return generatedSquad;
     }
@@ -130,12 +130,14 @@ public class GreedyConstructionAlgorithm implements ISearchAlgorithm {
                 .filter(playerPredicate)
                 .filter(p -> playerValidInSquadRule.test(squad, p))
                 .mapToDouble(costFunction::apply)
+                .filter(Double::isFinite)
                 .max().orElse(0);
 
         double min = players.stream()
                 .filter(playerPredicate)
                 .filter(p -> playerValidInSquadRule.test(squad, p))
                 .mapToDouble(costFunction::apply)
+                .filter(Double::isFinite)
                 .min().orElse(0);
 
         double limit = min + alpha * (max - min);
@@ -143,6 +145,7 @@ public class GreedyConstructionAlgorithm implements ISearchAlgorithm {
         return players.stream()
                 .filter(playerPredicate)
                 .filter(p -> playerValidInSquadRule.test(squad, p))
+                .filter(p -> Double.isFinite(costFunction.apply(p)))
                 .filter(p -> costFunction.apply(p) >= limit - DOUBLE_ERROR)
                 .collect(Collectors.toCollection(ArrayList::new));
     }
